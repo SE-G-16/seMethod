@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Updated .gitignore &#10;Added a License file">
-      <change beforePath="$PROJECT_DIR$/.LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Updated README with badges &#10;renamed License file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -117,7 +116,7 @@
       <workItem from="1707475185609" duration="1087000" />
       <workItem from="1707477877899" duration="95000" />
       <workItem from="1707477984254" duration="2927000" />
-      <workItem from="1707774318960" duration="1261000" />
+      <workItem from="1707774318960" duration="2303000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -159,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707774386662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated README with badges &#10;renamed License file">
+      <option name="closed" value="true" />
+      <created>1707775690007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707775690007</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +188,8 @@
     <MESSAGE value="testing" />
     <MESSAGE value="app.java commit" />
     <MESSAGE value="Updated .gitignore &#10;Added a License file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore &#10;Added a License file" />
+    <MESSAGE value="Updated README with badges &#10;renamed License file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README with badges &#10;renamed License file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

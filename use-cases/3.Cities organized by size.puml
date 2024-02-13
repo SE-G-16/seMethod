@@ -4,10 +4,10 @@
 
 actor HR as "HR Advisor"
 
-rectangle Database
+card Database
 
-rectangle "HR System" {
-    usecase UC4 as "All the cities in the
+card "HR System" {
+    usecase UC3 as "All the cities in the
     world, continents, regions,
      countries and district
      are organized from
@@ -16,9 +16,9 @@ rectangle "HR System" {
 
     usecase UCa as "Population"
 
-    HR - UC4
-    UC4 ..> UCa : include
-    UC4 - Database
+    HR - UC3
+    UC3 ..> UCa : include
+    UC3 - Database
 }
 
 @enduml

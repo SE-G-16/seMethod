@@ -1,0 +1,22 @@
+
+@startuml
+
+actor MY as "Mayor"
+
+card Database
+
+card "Mayor" {
+    usecase UC7 as "The overall population,
+    people living in the city
+    and
+     people not living in the city.
+    "
+
+    usecase UCa as "Population"
+
+    MY - UC7
+    UC7 ..> UCa : include
+    UC7 - Database
+}
+
+@enduml

@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Created user folder&#10;created user stories &#10;created user diagrams">
-      <change beforePath="$PROJECT_DIR$/Userfiles/User_stories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Userfiles/User_stories.md" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="created the population">
+      <change afterPath="$PROJECT_DIR$/use-cases/2.Top populated countries.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/6.Top populated capital cities.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/use-cases/7.Population of people living and not living in cities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/Cities in the world.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/3.Cities organized by size.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/Countries by continents.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/HR Advisor.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/4.Top populated cities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/capitals in the world.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/5.Capital Cities by size .puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/population of the countries.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/1.Countries organized by size.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-cases/population.puml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +79,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DIYA SHARMA/Desktop/seMethod",
+    "last_opened_file_path": "C:/Users/anany/seMethod/use-cases",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,10 +89,14 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
+    "two.files.diff.last.used.file": "C:/Users/anany/seMethod/use-cases/6.Top populated capital cities.puml",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anany\seMethod\use-cases" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anany\seMethod\Userfiles" />
     </key>
@@ -149,7 +162,7 @@
       <workItem from="1707774318960" duration="2691000" />
       <workItem from="1707826610779" duration="474000" />
       <workItem from="1707832709364" duration="1096000" />
-      <workItem from="1707833858047" duration="3686000" />
+      <workItem from="1707833858047" duration="9600000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -247,7 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707837342524</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refractored user stories to MD file">
+      <option name="closed" value="true" />
+      <created>1707837735009</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707837735009</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created the population">
+      <option name="closed" value="true" />
+      <created>1707838815955</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707838815955</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +305,9 @@
     <MESSAGE value="Created a Use Case for HR for the cities by population size" />
     <MESSAGE value="Created a Use Case for HR for the countries by population size" />
     <MESSAGE value="Created user folder&#10;created user stories &#10;created user diagrams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created user folder&#10;created user stories &#10;created user diagrams" />
+    <MESSAGE value="refractored user stories to MD file" />
+    <MESSAGE value="created the population" />
+    <option name="LAST_COMMIT_MESSAGE" value="created the population" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -7,7 +7,7 @@ actor HR as "HR Advisor"
 rectangle Database
 
 rectangle "HR System" {
-    usecase UC4 as "All the countries in the
+    usecase UC1 as "All the countries in the
     world, continents, regions,
      are organized from
      largest to smallest population.
@@ -15,9 +15,9 @@ rectangle "HR System" {
 
     usecase UCa as "Population"
 
-    HR - UC4
-    UC4 ..> UCa : include
-    UC4 - Database
+    HR - UC1
+    UC1 ..> UCa : include
+    UC1 - Database
 }
 
 @enduml

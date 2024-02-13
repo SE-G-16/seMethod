@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Updated pom file to create a maven build&#10;&#10;Built maven package for MongoApp with (jar-with-dependencies)">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="In  middle of bridged Docker Communication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MongoApp">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="MongoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.MongoApp" />
       <module name="seMethods" />
@@ -127,7 +126,6 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildOnly" value="true" />
           <option name="containerName" value="" />
           <option name="commandLineOptions" value="--network se-methods" />
           <option name="sourceFilePath" value="Dockerfile" />
@@ -147,7 +145,7 @@
       <deployment type="docker-image">
         <settings>
           <option name="imageTag" value="mongo:latest" />
-          <option name="containerName" value="mongo-dbserver" />
+          <option name="containerName" value="dbserver" />
           <option name="commandLineOptions" value="--network se-methods" />
         </settings>
       </deployment>
@@ -155,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.MongoApp" />
         <item itemvalue="Docker.Docker Image" />
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.mongo_db" />
         <item itemvalue="Docker.Docker Image (2)" />
       </list>
@@ -240,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707781252993</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="In  middle of bridged Docker Communication">
+      <option name="closed" value="true" />
+      <created>1707785094909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707785094909</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +271,7 @@
     <MESSAGE value="Added Mongo Db driver 3.12.10 a more up to date database driver to the pom dependencies" />
     <MESSAGE value="Created a MongoApp.java to differ from original app and call teh new class for docker utility" />
     <MESSAGE value="Updated pom file to create a maven build&#10;&#10;Built maven package for MongoApp with (jar-with-dependencies)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated pom file to create a maven build&#10;&#10;Built maven package for MongoApp with (jar-with-dependencies)" />
+    <MESSAGE value="In  middle of bridged Docker Communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="In  middle of bridged Docker Communication" />
   </component>
 </project>

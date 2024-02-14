@@ -6,7 +6,7 @@ actor HR as "HR Advisor"
 
 rectangle Database
 
-rectangle "HR System" {
+rectangle "HR Advisor" {
     usecase UC1 as "All the countries in the
     world, continents, regions,
      are organized from

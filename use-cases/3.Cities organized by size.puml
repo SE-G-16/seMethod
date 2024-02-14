@@ -6,7 +6,7 @@ actor HR as "HR Advisor"
 
 card Database
 
-card "HR System" {
+card "HR Advisor" {
     usecase UC3 as "All the cities in the
     world, continents, regions,
      countries and district

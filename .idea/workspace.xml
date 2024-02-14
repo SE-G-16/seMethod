@@ -97,9 +97,22 @@
       <recent name="C:\Users\anany\seMethod\Userfiles" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Application.MongoApp">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MongoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.MongoApp" />
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -127,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MongoApp" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.App" />
         <item itemvalue="Docker.Dockerfile" />

@@ -1,0 +1,21 @@
+
+@startuml
+
+actor MY as "Mayor"
+
+card Database
+
+card "Mayor" {
+    usecase UC6 as "All the Top populated cities in the
+                        world, continents, regions,
+                       over 1.5 million.
+    "
+
+    usecase UCa as "Population"
+
+    MY - UC6
+    UC6 ..> UCa : include
+    UC6 - Database
+}
+
+@enduml

@@ -1,19 +1,67 @@
-# The organisation has asked for the following reports to be generated:
-### Country Reports:
 
-•	Generate a list of the top N populated countries in the world, a continent, or a region based on user input for N.
 
-### City Reports:
-•	All the cities in the world, continents, regions, countries and district are organized from largest to smallest population.
-•	Top N populated cities in the world, continent, region, country, or district.
-### Capital City Reports:
-•	All the Capital Cities in the world, Continents, and regions organized from largest to smallest population.
+ **USER STORIES:**
+1.	**HR Advisor:**
+      
+•	As an HR Advisor, I want to produce a report of countries in the world organized by largest to smallest population, so that I can understand the population size of the world.
+      
+•	As an HR Advisor, I want to produce a report of countries in a continent organized by largest to smallest population, so that I can understand the population size within continents.
+     
+ •	As an HR Advisor, I want to produce a report of countries in a region organized by largest to smallest population, so that I can understand population size within regions.
+2.	**Mayor**:
+     
+•	As a Mayor, I want to gain insight into the top N populated countries in the world, where N is provided by me, so that I can focus on the most populated countries for study.
+     
+ •	As a Mayor, I want to gain insight into the top N populated countries in a continent, where N is provided by me, so that I can focus on the most populated countries within a continent for study.
+     
+ •	As a Mayor, I want to gain insight into the top N populated countries in a region, where N is provided by me, so that I can focus on the most populated countries within a region for study.
+3.	**HR Advisor**:
+      
+•	As a HR Advisor, I want to produce a report of cities in the world organized by largest to smallest population, so that I can understand population size across cities globally.
+      
+•	As a HR Advisor, I want to produce a report of cities in a continent organized by largest to smallest population, so that I can understand population size within continents.
+      
+•	As a HR Advisor, I want to produce a of cities in a region organized by largest to smallest population, so that I can understand population size within regions.
+     
+ •	As a HR Advisor, I want to produce a report of cities in a country organized by largest to smallest population, so that I can understand population size within countries.
+     
+ •	As a HR Advisor, I want to produce a report of cities in a district organized by largest to smallest population, so that I can understand population size within districts.
 
-•	Top N populated capital cities in the world, continent, or region.
-### 4.	Population Reports:
+4. 4.**MAYOR**:
 
-•	The population of people, people living in cities, and people not living in cities is analyzed for each continent, region, and country.
-### 5.	Language Report:
-•	Number of speakers and percentage of the world population for specific languages.
-Additional Information Accessible to the Organization:
-•	Population data for the world, continents, regions, countries, districts, and cities.
+•	As a Mayor, I want to gain insight into the top N populated cities in the world, where N is provided by me, so that I can focus on the most populated cities for study.
+
+•	As a Mayor, I want to gain insight into the top N populated cities in a continent, where N is provided by me, so that I can focus on the most populated cities within a continent for study.
+
+•	As a Mayor, I want to gain insight into the top N populated cities in a region, where N is provided by me, so that I can focus on the most populated cities within a region for study.
+
+•	As a Mayor, I want to gain insight into the top N populated cities in a country, where N is provided by me, so that I can focus on the most populated cities within a country for study.
+
+•	As a Mayor, I want to gain insight into the top N populated cities in a district, where N is provided by me, so that I can focus on the most populated cities within a district for study.
+
+5.**HR Advisor**:
+
+•	As an HR Advisor, I want to produce a report of capital cities in the world organized by largest to smallest population, so that I can understand the population size of capital cities globally.
+
+•	As an HR Advisor, I want to produce a report of capital cities in a continent organized by largest to smallest population, so that I can understand the population size of capital cities within continents.
+
+•	As an HR Advisor, I want to produce a report of capital cities in a region organized by largest to smallest population, so that I can understand the population size of capital cities within regions.
+
+6.**Mayor**:
+
+•	As a Mayor, I want to gain insight into the top N populated capital cities in the world, where N is provided by me, so that I can focus on the most populated capital cities for study.
+
+•	As a Mayor, I want to gain insight into the top N populated capital cities in a continent, where N is provided by me, so that I can focus on the most populated capital cities within a continent for study.
+
+•	As a Mayor, I want to gain insight into he top N populated capital cities in a region, where N is provided by me, so that I can focus on the most populated capital cities within a region for study.
+
+7.**Mayor**:
+• As a Mayor, I want to gain insight into the population of people, people living in cities, and people not living in cities in each continent, so that I can understand population size trends.
+
+•As a Mayor, I want to gain insight into the population of people, people living in cities, and people not living in cities in each region, so that I can understand population size trends.
+
+•As a Mayor, I want to gain insight into the population of people, people living in cities, and people not living in cities in each country, so that I can understand population size trends.
+
+
+
+

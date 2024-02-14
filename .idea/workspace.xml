@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added a new MongoApp class and created a db connection code">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Version 0.1.0.3&#10;Updated README for other branches">
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="release" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,6 +69,7 @@
     "DefaultPlantUmlFileTemplate": "UML Use Case",
     "Docker.Dockerfile.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
+    "Maven.seMethods [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -140,17 +141,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Application.MongoApp" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.MongoApp" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
         <option value="jdk-17.0.10-graalvm-jdk-17.0.10-4caba194b151-6d8b2ca1" />
       </set>
     </attachedChunks>
@@ -178,6 +180,7 @@
       <workItem from="1707845013226" duration="8000" />
       <workItem from="1707918946254" duration="1848000" />
       <workItem from="1707928037942" duration="1069000" />
+      <workItem from="1707943733304" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -355,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707939081565</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Version 0.1.0.3&#10;Updated README for other branches">
+      <option name="closed" value="true" />
+      <created>1707944440665</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1707944440665</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +402,8 @@
     <MESSAGE value="Updated README.md with repo links" />
     <MESSAGE value="Updated pom.xml with mongodb dependencies" />
     <MESSAGE value="Added a new MongoApp class and created a db connection code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a new MongoApp class and created a db connection code" />
+    <MESSAGE value="Version 0.1.0.3&#10;Updated README for other branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.0.3&#10;Updated README for other branches" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

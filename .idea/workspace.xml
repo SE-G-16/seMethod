@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="updated the use cases and diagrams">
+      <change afterPath="$PROJECT_DIR$/Userfiles/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Userfiles/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Userfiles/img_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-cases/1.Countries organized by size.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/1.Countries organized by size.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-cases/3.Cities organized by size.puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/3.Cities organized by size.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-cases/5.Capital Cities by size .puml" beforeDir="false" afterPath="$PROJECT_DIR$/use-cases/5.Capital Cities by size .puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Userfiles/User_stories.md" beforeDir="false" afterPath="$PROJECT_DIR$/Userfiles/User_stories.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +158,8 @@
       <workItem from="1707832709364" duration="1096000" />
       <workItem from="1707833858047" duration="10604000" />
       <workItem from="1707845013226" duration="8000" />
-      <workItem from="1707918946254" duration="1656000" />
+      <workItem from="1707918946254" duration="1848000" />
+      <workItem from="1707928037942" duration="1069000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -280,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707843625976</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updated the use cases and diagrams">
+      <option name="closed" value="true" />
+      <created>1707923769440</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707923769441</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

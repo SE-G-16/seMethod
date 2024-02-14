@@ -1,0 +1,22 @@
+
+
+@startuml
+
+actor HR as "HR Advisor"
+
+rectangle Database
+
+rectangle "HR Advisor" {
+    usecase UC5 as "All the  capital cities in the
+    world, continents and regions  are organized by
+     largest to smallest.
+    "
+
+    usecase UCa as "Population"
+
+    HR - UC5
+    UC5 ..> UCa : include
+    UC5 - Database
+}
+
+@enduml

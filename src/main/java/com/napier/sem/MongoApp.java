@@ -10,8 +10,7 @@ public class MongoApp {
     public static void main(String[] args) {
 
         // Connect to MongoDB on local system - we're using port 27000
-        // I added a try catch to help troubleshoot connection issues
-        try{
+        try {
             MongoClient mongoClient = new MongoClient("localhost", 27000);
 
             // Get a database - will create when we use it
@@ -29,19 +28,18 @@ public class MongoApp {
             // Check document in collection
             Document myDoc = collection.find().first();
 
-            try
-            {
+            try {
                 System.out.println(myDoc.toJson());
+            } catch (NullPointerException ex) {
+                System.out.println("Error Exception: " + ex);
             }
-            catch(NullPointerException ex)
-            {
-                System.out.println("Error Exception: "  + ex);
-            }
+
         }
         catch(Exception ex)
         {
-            System.out.println("There has been a connection issues, check host details: " + ex);
+            System.out.println("Connection error: " + ex);
         }
+
 
 
 

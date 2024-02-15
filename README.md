@@ -5,7 +5,7 @@
 
 ###### [*Emmanuel Ikechukwu Benson*](https://github.com/Emmaben)
 ###### [*Ananya Akula Akula*](https://github.com/Okehusingit)
-###### [*Diya Sharma*](https://github.com/Diya)
+###### [*Diya Sharma*](https://github.com/Diya2715)
 ###### [*Neil Mckenna*](https://github.com/neil-mckenna)
 
 

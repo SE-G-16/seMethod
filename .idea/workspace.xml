@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Version 0.1.0.3&#10;Updated README for other branches">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +69,7 @@
     "Application.App.executor": "Run",
     "Application.MongoApp.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Use Case",
+    "Docker.Docker Image.executor": "Run",
     "Docker.Dockerfile.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
     "Maven.seMethods [package].executor": "Run",
@@ -125,12 +128,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="mongo:latest" />
+          <option name="containerName" value="mongo" />
+          <option name="commandLineOptions" value="--network se-methods" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -141,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.MongoApp" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.MongoApp" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +198,7 @@
       <workItem from="1707918946254" duration="1848000" />
       <workItem from="1707928037942" duration="1069000" />
       <workItem from="1707943733304" duration="259000" />
+      <workItem from="1708346476236" duration="503000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />

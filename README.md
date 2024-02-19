@@ -10,9 +10,10 @@
 
 
 
-* Master Build Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/main_mongo.yml?branch=master)
-* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/main_mongo.yml?branch=develop)
-* Release Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/main_mongo.yml?branch=release)
+* Master Build Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/mysql_test.yml?branch=master)
+* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/mysql_test.yml?branch=develop)
+* Release Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/mysql_test.yml?branch=release)
+* Mysql/feature Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/mysql_test.yml?branch=mysql/feature)
 
 * License [![LICENSE](https://img.shields.io/github/license/SE-G-16/seMethod.svg?style=flat-square)](https://github.com/SE-G-16/seMethod/blob/master/LICENSE)
 

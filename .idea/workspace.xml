@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/test_db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +133,6 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
@@ -218,7 +210,7 @@
       <workItem from="1707918946254" duration="1848000" />
       <workItem from="1707928037942" duration="1069000" />
       <workItem from="1707943733304" duration="259000" />
-      <workItem from="1708346476236" duration="3639000" />
+      <workItem from="1708346476236" duration="5593000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -412,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708347070241</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed">
+      <option name="closed" value="true" />
+      <created>1708350599529</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708350599529</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +452,8 @@
     <MESSAGE value="&#10;Updated README for other branches" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
+    <MESSAGE value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

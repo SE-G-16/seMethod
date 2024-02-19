@@ -30,3 +30,4 @@ docker run -p 27017:27017 -d mongo
 ---
 #### when docker compose is not updating to the changes due to the cache, overwrite with this 
 docker-compose up --build
+docker-compose build --no-cache

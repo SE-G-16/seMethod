@@ -12,6 +12,15 @@ public class App {
         // Connect to database
         a.connect();
 
+        // message to look prettier and tell of incoming query
+        System.out.println("Running a query on the city class...");
+
+        // Get City
+        City cty = a.getCity(1);
+
+        // Display city results
+        a.displayCity(cty);
+
         // Disconnect from database
         a.disconnect();
 

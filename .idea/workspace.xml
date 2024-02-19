@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="minor changes">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +218,7 @@
       <workItem from="1707918946254" duration="1848000" />
       <workItem from="1707928037942" duration="1069000" />
       <workItem from="1707943733304" duration="259000" />
-      <workItem from="1708346476236" duration="6631000" />
+      <workItem from="1708346476236" duration="8696000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -428,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708352714856</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also">
+      <option name="closed" value="true" />
+      <created>1708353713470</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708353713470</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +478,8 @@
     <MESSAGE value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
     <MESSAGE value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

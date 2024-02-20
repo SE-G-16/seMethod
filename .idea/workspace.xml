@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Created the country class&#10;created country methods in SqlApp&#10;Updated the App&#10;&#10;Now show city and country information">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/CountryLanguage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
@@ -448,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708355802461</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Created the country class&#10;created country methods in SqlApp&#10;Updated the App&#10;&#10;Now show city and country information">
+      <option name="closed" value="true" />
+      <created>1708435786931</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708435786931</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing" />
     <MESSAGE value="app.java commit" />
     <MESSAGE value="Updated .gitignore &#10;Added a License file" />
     <MESSAGE value="Updated README with badges &#10;renamed License file" />
@@ -492,7 +499,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
     <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
+    <MESSAGE value="Created the country class&#10;created country methods in SqlApp&#10;Updated the App&#10;&#10;Now show city and country information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the country class&#10;created country methods in SqlApp&#10;Updated the App&#10;&#10;Now show city and country information" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

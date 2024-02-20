@@ -134,6 +134,7 @@ public class SqlApp
 
     //<editor-fold desc="country methods>"
 
+    // a method for retrieving the information from the selected country
     public Country getCountry(String _code)
     {
         try
@@ -184,6 +185,7 @@ public class SqlApp
         }
     }
 
+    // a method for displaying the country
     public void displayCountry(Country _country)
     {
         if (_country != null)
@@ -207,5 +209,67 @@ public class SqlApp
             );
         }
     }
+    //</editor-fold>
+
+    //<editor-fold desc="country language methods>"
+
+    // a method for retrieving the information from the selected country language
+    public CountryLanguage getCountryOfficialLanguage(String _code)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  countrycode, language, isofficial, percentage "
+                            + "FROM countrylanguage "
+                            //+ "WHERE code =  'CUB'";
+                            + "WHERE countrycode =  '" + _code + "'"
+                            + " AND isofficial = 'T'";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                CountryLanguage countryLanguage = new CountryLanguage();
+                countryLanguage.country_code = rset.getString("countrycode");
+                countryLanguage.language = rset.getString("language");
+                countryLanguage.is_official = rset.getString("isofficial");
+                countryLanguage.percentage = rset.getDouble("percentage");
+
+                return countryLanguage;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country language details");
+            return null;
+        }
+    }
+
+    // a method for displaying the country language
+    public void displayCountryLanguage(CountryLanguage _language)
+    {
+        if (_language != null)
+        {
+            System.out.println(
+                    "Country Code: " + _language.country_code + "\n" +
+                            "Language: " + _language.language + "\n" +
+                            "Is Official language : " + _language.is_official + "\n" +
+                            "Pecentage: " + _language.percentage + "\n"
+
+            );
+        }
+    }
+
+
+
+
+
     //</editor-fold>
 }

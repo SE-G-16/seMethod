@@ -21,6 +21,13 @@ public class App {
         // Display city results
         a.displayCity(cty);
 
+        // Get Country // test cuba 3 letter string //
+        // GBR = UK, FRA = france, ESP = spain, USA = america
+        Country cnt = a.getCountry("USA");
+
+        // Display country
+        a.displayCountry(cnt);
+
         // Disconnect from database
         a.disconnect();
 

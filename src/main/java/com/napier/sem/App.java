@@ -23,12 +23,14 @@ public class App {
         ArrayList<Object> allCountriesInContinent = a.GetQTypeByPopSize(QType.Country, Area.Continent, "Europe", 20);
         // get all countries in a specific continent by size
         ArrayList<Object> allCountriesInRegion = a.GetQTypeByPopSize(QType.Country, Area.Region, "Western Europe", 10);
-
-
-
-
-        //ArrayList<Object> allCities = a.GetQTypeByPopSize(QType.City, Area.World, "", 0);
-        //ArrayList<Object> allCapitals = a.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 0);
+        // get all cities in a specific continent by size
+        ArrayList<Object> allCities = a.GetQTypeByPopSize(QType.City, Area.World, "", 15);
+        // get all capitals in a specific continent by size
+        ArrayList<Object> allCapitals = a.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 15);
+        // get all capitals in a specific continent by size and by a specific continent
+        ArrayList<Object> euroCapitals = a.GetQTypeByPopSize(QType.CapitalCities, Area.Continent, "Europe", 15);
+        // get all capitals in a specific continent by size and by a specific region
+        ArrayList<Object> westEuroCapitals = a.GetQTypeByPopSize(QType.CapitalCities, Area.Region, "Western Europe", 15);
 
         System.out.println("\nCountries by Pop desc\n");
         a.displayObjects(allCountries);
@@ -39,13 +41,17 @@ public class App {
         System.out.println("\nCountries by Pop in a specific desc\n");
         a.displayObjects(allCountriesInRegion);
 
-
-
         System.out.println("\nCities by Pop desc\n");
-        //a.displayObjects(allCities);
+        a.displayObjects(allCities);
 
-        System.out.println("\n\nCapitals by Pop desc\n\n");
-        //a.displayObjects(allCapitals);
+        System.out.println("\nCapitals by Pop desc\n");
+        a.displayObjects(allCapitals);
+
+        System.out.println("\nCapitals by Pop desc in europe\n");
+        a.displayObjects(euroCapitals);
+
+        System.out.println("\nCapitals by Pop desc in western europe region\n");
+        a.displayObjects(westEuroCapitals);
 
 
         // Disconnect from database

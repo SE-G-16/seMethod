@@ -451,9 +451,9 @@ public class SqlApp
                 // Create string for SQL statement
                 String strSelect =
 
-                        "SELECT  * FROM city "
+                        "SELECT * FROM city Left Join country ON city.ID = country.Capital "
                                 + sqlArgs
-                                + " order by population desc "
+                                + " order by city.population desc "
                                 + topArgs
                         ;
 

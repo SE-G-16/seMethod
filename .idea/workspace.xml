@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Midway refactoring commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Major refactoring to handle multiple query types&#10;&#10;capital cities is not correct yet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/CountryLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/CountryLanguage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,13 +25,6 @@
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="mysql/feature" />
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="OPTIONS">
-      <set>
-        <option value="NO_COMMIT" />
-      </set>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -237,7 +228,7 @@
       <workItem from="1708458002745" duration="11000" />
       <workItem from="1708594395029" duration="3650000" />
       <workItem from="1708600691764" duration="6370000" />
-      <workItem from="1708635408777" duration="3730000" />
+      <workItem from="1708635408777" duration="6091000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -487,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708631695207</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Major refactoring to handle multiple query types&#10;&#10;capital cities is not correct yet">
+      <option name="closed" value="true" />
+      <created>1708639340487</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708639340490</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +505,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated README with badges &#10;renamed License file" />
     <MESSAGE value="Fixed Badges" />
     <MESSAGE value="Created a Use Case for HR for the world by population size" />
     <MESSAGE value="Created a Use Case for HR for the continent by population size" />
@@ -531,7 +529,8 @@
     <MESSAGE value="Added the sql query to get the list of all countries by its size" />
     <MESSAGE value="slight update" />
     <MESSAGE value="Midway refactoring commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Midway refactoring commit" />
+    <MESSAGE value="Major refactoring to handle multiple query types&#10;&#10;capital cities is not correct yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major refactoring to handle multiple query types&#10;&#10;capital cities is not correct yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,7 @@
 package com.napier.sem;
 
+import java.util.ArrayList;
+
 public class App {
 
     // main entry point
@@ -52,6 +54,11 @@ public class App {
 
 
         //------//
+        // message to look prettier and tell of incoming query
+        System.out.println("Running a query on all countries...");
+        ArrayList<Country> countries = a.GetAllCountriesByPopulation();
+
+        a.displayAllCountiresBySize(countries);
 
 
         // Disconnect from database

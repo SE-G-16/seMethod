@@ -54,11 +54,17 @@ public class App {
 
 
         //------//
+
         // message to look prettier and tell of incoming query
         System.out.println("Running a query on all countries...");
+
+        // get all countries by size
         ArrayList<Country> countries = a.GetAllCountriesByPopulation();
 
+        // show all countries by size
         a.displayAllCountiresBySize(countries);
+
+        //-----//
 
 
         // Disconnect from database

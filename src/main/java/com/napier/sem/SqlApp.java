@@ -305,8 +305,7 @@ public class SqlApp
         }
     }
 
-    public void displayAllCountiresBySize(ArrayList<Country> countries)
-    {
+    public void displayAllCountiresBySize(ArrayList<Country> countries) {
         System.out.println("size of list" + countries.size());
 
 
@@ -314,15 +313,7 @@ public class SqlApp
             System.out.println(i.name + " " + i.population);
         }
 
-
-
-
-
-
     }
-
-
-
 
 
 

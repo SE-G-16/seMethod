@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="updated the user stories">
-      <change afterPath="$PROJECT_DIR$/db_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added the sql query to get the list of all countries by its size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +233,7 @@
       <workItem from="1708346476236" duration="12428000" />
       <workItem from="1708458002745" duration="11000" />
       <workItem from="1708594395029" duration="3650000" />
-      <workItem from="1708600691764" duration="4352000" />
+      <workItem from="1708600691764" duration="6370000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -464,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708355802461</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added the sql query to get the list of all countries by its size">
+      <option name="closed" value="true" />
+      <created>1708606957204</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708606957204</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing" />
     <MESSAGE value="app.java commit" />
     <MESSAGE value="Updated .gitignore &#10;Added a License file" />
     <MESSAGE value="Updated README with badges &#10;renamed License file" />
@@ -508,7 +510,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
     <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
+    <MESSAGE value="Added the sql query to get the list of all countries by its size" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the sql query to get the list of all countries by its size" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

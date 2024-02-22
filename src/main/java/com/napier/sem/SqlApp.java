@@ -290,6 +290,8 @@ public class SqlApp
 
     //</editor-fold>
 
+    ///////////////////////////////////////////////////////////////////////////////////////
+
     // multi use display using tostring
     public void displayObjects(ArrayList<Object> objList) {
 
@@ -311,24 +313,46 @@ public class SqlApp
     }
 
 
-    public ArrayList<Object> GetQTypeByPopSize (QType _qtype, Area _area, String areaStr)
+    // Qtype = Country,City, CapitalCities
+    // Area = World, Continent, Region, Country, District
+    // areaStr = "Europe, Germany, etc"
+    public ArrayList<Object> GetQTypeByPopSize (QType _qtype, Area _area, String areaStr, Integer topAmt)
     {
-        String aStr = "";
-        switch (_area)
-        {
+        String sqlArgs = "";
+        switch (_area) {
             case World:
-                aStr = "*";
+                sqlArgs = "";
+                break;
+
+            case Continent:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case Region:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case Country:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case District:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
                 break;
 
             default:
+                sqlArgs = "";
                 break;
-
-
         }
 
+        // adding a limit amount to a query
+        String topArgs = "";
+        if(topAmt != null)
+        {
+            topArgs = "LIMIT " + topAmt.toString();
+        }
 
-
-
+        // specify differnet types
         if(_qtype == QType.Country)
         {
             try {
@@ -338,7 +362,13 @@ public class SqlApp
                 Statement stmt = con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
-                        "SELECT  * FROM country where " + aStr + " = '" + areaStr + "' order by population desc ";
+                        "SELECT  * FROM country "
+                            + sqlArgs
+                            + " order by population desc "
+                            + topArgs
+                        ;
+                System.out.println("SQL statement: " + strSelect);
+
                 // Execute SQL statement
                 ResultSet rset = stmt.executeQuery(strSelect);
                 // Return new employee if valid.
@@ -370,7 +400,14 @@ public class SqlApp
                 Statement stmt = con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
-                        "SELECT  * FROM city order by population desc ";
+                        "SELECT  * FROM city "
+                                + sqlArgs
+                                + " order by population desc "
+                                + topArgs
+                        ;
+
+                System.out.println("SQL statement: " + strSelect);
+
                 // Execute SQL statement
                 ResultSet rset = stmt.executeQuery(strSelect);
                 // Return new employee if valid.
@@ -396,6 +433,16 @@ public class SqlApp
         }
         else if (_qtype == QType.CapitalCities)
         {
+            // tested query
+
+            // SELECT city.id, city.name, city.Population AS `city population`, country.Population AS `country pop`
+            //FROM country
+            //LEFT JOIN city ON city.ID = country.Capital
+            //
+            //order BY city.Population DESC
+            //LIMIT 10
+
+
             try {
                 ArrayList<City> capitalCities = new ArrayList<>();
 
@@ -403,7 +450,15 @@ public class SqlApp
                 Statement stmt = con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
-                        "SELECT  * FROM city order by population desc ";
+
+                        "SELECT  * FROM city "
+                                + sqlArgs
+                                + " order by population desc "
+                                + topArgs
+                        ;
+
+                System.out.println("SQL statement: " + strSelect);
+
                 // Execute SQL statement
                 ResultSet rset = stmt.executeQuery(strSelect);
                 // Return new employee if valid.
@@ -432,88 +487,11 @@ public class SqlApp
             System.out.println("Qtype invalid: " + _qtype );
             return null;
         }
+    } // end of GetQTypeByPopSize
 
 
 
-    }
 
-
-
-    // continet population
-    public ArrayList<Country> GetAllCountriesByPopulationByContinent (String _continent)
-    {
-        try {
-            ArrayList<Country> countries = new ArrayList<Country>();
-
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT  * "
-                            + "FROM country "
-                            + "WHERE continent = '" + _continent + "'"
-
-                            + " order by population desc ";
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new employee if valid.
-            // Check one is returned
-            while (rset.next()) {
-
-                Country country = new Country();
-                country.code = rset.getString("code");
-                country.name = rset.getString("name");
-                country.population = rset.getInt("population");
-
-                countries.add(country);
-            }
-            return countries;
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get country language details");
-            return null;
-        }
-    }
-
-    // continet population
-    public ArrayList<Country> GetAllCountriesByPopulationByRegion (String _region)
-    {
-        try {
-            ArrayList<Country> countries = new ArrayList<Country>();
-
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT  * "
-                            + "FROM country "
-                            + "WHERE region = '" + _region + "'"
-
-                            + " order by population desc ";
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new employee if valid.
-            // Check one is returned
-            while (rset.next()) {
-
-                Country country = new Country();
-                country.code = rset.getString("code");
-                country.name = rset.getString("name");
-                country.population = rset.getInt("population");
-
-                countries.add(country);
-            }
-            return countries;
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get country language details");
-            return null;
-        }
-    }
 
 
 

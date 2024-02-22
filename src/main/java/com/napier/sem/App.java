@@ -17,67 +17,36 @@ public class App {
         a.connect();
 
 
-
-        // message to look prettier and tell of incoming query
-        //System.out.println("Running a query on the country class (ESP)...");
-
-        // Get Country // test cuba 3 letter string //
-        // GBR = UK, FRA = france, ESP = spain, USA = america
-        //Country cnt = a.getCountry("DEU");
-
-
-        // Get City // capital of america
-        //City cty = a.getCity(3068);
-
-
-        // Get language // america
-        //CountryLanguage cLang = a.getCountryOfficialLanguage("DEU");
+        // get all countries in world by size
+        ArrayList<Object> allCountries = a.GetQTypeByPopSize(QType.Country, Area.World, "", 10);
+        // get all countries in a specific continent by size
+        ArrayList<Object> allCountriesInContinent = a.GetQTypeByPopSize(QType.Country, Area.Continent, "Europe", 20);
+        // get all countries in a specific continent by size
+        ArrayList<Object> allCountriesInRegion = a.GetQTypeByPopSize(QType.Country, Area.Region, "Western Europe", 10);
 
 
 
 
-        // get all countries by size
-        //ArrayList<Country> countries = a.GetAllCountriesByPopulation();
+        //ArrayList<Object> allCities = a.GetQTypeByPopSize(QType.City, Area.World, "", 0);
+        //ArrayList<Object> allCapitals = a.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 0);
 
-        // get all countries by size abd continent
-        //ArrayList<Country> conCountries = a.GetAllCountriesByPopulationByContinent("Asia");
+        System.out.println("\nCountries by Pop desc\n");
+        a.displayObjects(allCountries);
 
-        // get all countries by size abd continent
-        //ArrayList<Country> regCountries = a.GetAllCountriesByPopulationByRegion("British Islands");
+        System.out.println("\nCountries by Pop in a specific desc\n");
+        a.displayObjects(allCountriesInContinent);
 
-        // get all countries by size
-        ArrayList<Object> countries = a.GetQTypeByPopSize(QType.Country);
-        ArrayList<Object> cities = a.GetQTypeByPopSize(QType.City);
-        ArrayList<Object> capitals = a.GetQTypeByPopSize(QType.CapitalCities);
-
-        System.out.println("\nCountries by Pop desc");
-        a.displayObjects(countries);
-        System.out.println("\nCities by Pop desc");
-        a.displayObjects(cities);
-        System.out.println("\nCapitals by Pop desc");
-        a.displayObjects(capitals);
-
-
-        //ArrayList<Object> cities = a.GetAllByPopulation("city");
-
-        // show all countries by size
+        System.out.println("\nCountries by Pop in a specific desc\n");
+        a.displayObjects(allCountriesInRegion);
 
 
 
-        // display country languages
-        //a.displayCountryLanguage(cLang);
+        System.out.println("\nCities by Pop desc\n");
+        //a.displayObjects(allCities);
 
-        // Display city results
-        //a.displayCity(cty);
+        System.out.println("\n\nCapitals by Pop desc\n\n");
+        //a.displayObjects(allCapitals);
 
-        // show all countries by size and continent
-        //a.displayCountries(conCountries);
-
-        // Display country
-        //a.displayCountry(cnt);
-
-        // show all countries by size and continent
-        //a.displayCountry(regCountries);
 
         // Disconnect from database
         a.disconnect();

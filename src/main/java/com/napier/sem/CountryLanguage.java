@@ -26,4 +26,10 @@ public class CountryLanguage {
      */
     public double percentage;
 
+    @Override
+    public String toString() {
+
+        return "Country: " + country_code + " " +  language + " " + is_official + " " + percentage;
+    }
+
 }

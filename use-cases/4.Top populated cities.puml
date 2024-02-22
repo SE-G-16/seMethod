@@ -1,0 +1,23 @@
+
+
+@startuml
+
+actor MY as "Mayor"
+
+card Database
+
+card "Mayor" {
+    usecase UC4 as "All the Top populated countries in the
+                        world, continents, regions,
+                         countries and district
+                         over a million.
+    "
+
+    usecase UCa as "Population"
+
+    MY - UC4
+    UC4 ..> UCa : include
+    UC4 - Database
+}
+
+@enduml

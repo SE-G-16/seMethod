@@ -1,0 +1,20 @@
+@startuml
+
+actor MY as "Mayor"
+
+frame Database
+
+frame "Mayor" {
+    usecase UC2 as "All the Top populated countries in the
+    world, continents, regions,
+     > 700000
+    "
+
+    usecase UCa as "Population"
+
+    HR - UC2
+    UC2 ..> UCa : include
+    UC2 - Database
+}
+
+@enduml

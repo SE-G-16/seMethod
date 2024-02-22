@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class SqlApp
 {
@@ -268,9 +269,62 @@ public class SqlApp
     }
 
 
-
-
-
-
     //</editor-fold>
+
+    public ArrayList<Country> GetAllCountriesByPopulation ()
+    {
+        try {
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  * "
+                            + "FROM country order by population desc ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                Country country = new Country();
+                country.code = rset.getString("code");
+                country.name = rset.getString("name");
+                country.population = rset.getInt("population");
+
+                countries.add(country);
+            }
+            return countries;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country language details");
+            return null;
+        }
+    }
+
+    public void displayAllCountiresBySize(ArrayList<Country> countries)
+    {
+        System.out.println("size of list" + countries.size());
+
+
+        for (Country i : countries) {
+            System.out.println(i.name + " " + i.population);
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
 }

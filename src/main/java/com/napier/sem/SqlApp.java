@@ -271,7 +271,56 @@ public class SqlApp
 
     //</editor-fold>
 
-    public ArrayList<Country> GetAllCountriesByPopulation ()
+    public void displayObjects(ArrayList<Object> objlist) {
+        System.out.println("\nsize of list: " + objlist.size() + "\n");
+
+        for (Object i : objlist) {
+            System.out.println(i.getClass().toString());
+        }
+
+    }
+
+
+
+    public ArrayList<Object> GetAllByPopulation (String _input)
+    {
+        System.out.println(_input);
+        try {
+            ArrayList<Object> objects = new ArrayList<Object>();
+
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  * "
+                            + "FROM country order by population desc ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                Object obj = new Object();
+                //obj.code = rset.getString("code");
+                //obj.name = rset.getString("name");
+                //obj.population = rset.getInt("population");
+
+                objects.add(obj);
+            }
+            return objects;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get " + _input + " details");
+            return null;
+        }
+    }
+
+
+
+    // continet population
+    public ArrayList<Country> GetAllCountriesByPopulationByContinent (String _continent)
     {
         try {
             ArrayList<Country> countries = new ArrayList<Country>();
@@ -281,7 +330,10 @@ public class SqlApp
             // Create string for SQL statement
             String strSelect =
                     "SELECT  * "
-                            + "FROM country order by population desc ";
+                            + "FROM country "
+                            + "WHERE continent = '" + _continent + "'"
+
+                            + " order by population desc ";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
@@ -305,16 +357,43 @@ public class SqlApp
         }
     }
 
-    public void displayAllCountiresBySize(ArrayList<Country> countries) {
-        System.out.println("size of list" + countries.size());
+    // continet population
+    public ArrayList<Country> GetAllCountriesByPopulationByRegion (String _region)
+    {
+        try {
+            ArrayList<Country> countries = new ArrayList<Country>();
 
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  * "
+                            + "FROM country "
+                            + "WHERE region = '" + _region + "'"
 
-        for (Country i : countries) {
-            System.out.println(i.name + " " + i.population);
+                            + " order by population desc ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                Country country = new Country();
+                country.code = rset.getString("code");
+                country.name = rset.getString("name");
+                country.population = rset.getInt("population");
+
+                countries.add(country);
+            }
+            return countries;
         }
-
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country language details");
+            return null;
+        }
     }
-
 
 
 

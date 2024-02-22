@@ -15,11 +15,11 @@ public class App {
         //------//
 
         // message to look prettier and tell of incoming query
-        System.out.println("Running a query on the country class (USA)...");
+        System.out.println("Running a query on the country class (ESP)...");
 
         // Get Country // test cuba 3 letter string //
         // GBR = UK, FRA = france, ESP = spain, USA = america
-        Country cnt = a.getCountry("USA");
+        Country cnt = a.getCountry("DEU");
 
         // Display country
         a.displayCountry(cnt);
@@ -29,10 +29,10 @@ public class App {
 
 
         // message to look prettier and tell of incoming query
-        System.out.println("Running a query on the city class (washington=3813)...");
+        System.out.println("Running a query on the city class (madrid=653)...");
 
         // Get City // capital of america
-        City cty = a.getCity(3813);
+        City cty = a.getCity(3068);
 
         // Display city results
         a.displayCity(cty);
@@ -45,7 +45,7 @@ public class App {
         System.out.println("Running a query on the country language...");
 
         // Get language // america
-        CountryLanguage cLang = a.getCountryOfficialLanguage("USA");
+        CountryLanguage cLang = a.getCountryOfficialLanguage("DEU");
 
         // display country languages
         a.displayCountryLanguage(cLang);

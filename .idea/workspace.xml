@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="updated the user stories">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
     </list>
@@ -69,7 +64,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -96,6 +91,7 @@
     "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.CityTest.testGetCity.executor": "Run",
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
@@ -143,7 +139,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CityTest.testGetCity">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -232,9 +228,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.CityTest.testGetCity" />
         <item itemvalue="JUnit.CountryTest" />
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.CountryTest.testGetCountry" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
@@ -502,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708355802461</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File">
+      <option name="closed" value="true" />
+      <created>1709653286699</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709653286699</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing" />
     <MESSAGE value="app.java commit" />
     <MESSAGE value="Updated .gitignore &#10;Added a License file" />
     <MESSAGE value="Updated README with badges &#10;renamed License file" />
@@ -546,7 +549,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
     <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
+    <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

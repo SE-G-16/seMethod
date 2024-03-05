@@ -96,6 +96,8 @@ public class App {
 
         // Disconnect from database
         a.disconnect();
+        s.disconnect();
+        s = null;
 
 
     }

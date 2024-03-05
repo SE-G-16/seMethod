@@ -404,7 +404,8 @@ public class SqlApp
                 Statement stmt = con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
-                        "SELECT  * FROM city "
+                        "SELECT  * FROM city left join country on city.ID = country.capital "
+
                                 + sqlArgs
                                 + " order by population desc "
                                 + topArgs

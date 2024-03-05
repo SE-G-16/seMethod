@@ -2,6 +2,23 @@ package com.napier.sem;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
+
+enum QType {
+    Country,
+    City,
+    CapitalCities
+}
+
+enum Area {
+    World,
+    Continent,
+    Region,
+    Country,
+    District
+}
+
+
 
 public class SqlApp
 {
@@ -77,6 +94,8 @@ public class SqlApp
     }
 
     //</editor-fold>
+
+    //////////////////////////////////////////////////////////////////////////
 
     //<editor-fold desc="city methods>"
 
@@ -271,55 +290,204 @@ public class SqlApp
 
     //</editor-fold>
 
-    public ArrayList<Country> GetAllCountriesByPopulation ()
-    {
-        try {
-            ArrayList<Country> countries = new ArrayList<Country>();
+    ///////////////////////////////////////////////////////////////////////////////////////
 
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT  * "
-                            + "FROM country order by population desc ";
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new employee if valid.
-            // Check one is returned
-            while (rset.next()) {
+    // multi use display using tostring
+    public void displayObjects(ArrayList<Object> objList) {
 
-                Country country = new Country();
-                country.code = rset.getString("code");
-                country.name = rset.getString("name");
-                country.population = rset.getInt("population");
-
-                countries.add(country);
-            }
-            return countries;
-        }
-        catch (Exception e)
+        if(objList != null || objList.isEmpty())
         {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get country language details");
+            System.out.println("\nsize of list: " + objList.size() + "\n");
+
+            for (Object i : objList) {
+                System.out.println(i.toString());
+            }
+
+        }
+        else
+        {
+            System.out.println("\nObject list is empty!\n");
+        }
+
+
+    }
+
+
+    // Qtype = Country,City, CapitalCities
+    // Area = World, Continent, Region, Country, District
+    // areaStr = "Europe, Germany, etc"
+    public ArrayList<Object> GetQTypeByPopSize (QType _qtype, Area _area, String areaStr, Integer topAmt)
+    {
+        String sqlArgs = "";
+        switch (_area) {
+            case World:
+                sqlArgs = "";
+                break;
+
+            case Continent:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case Region:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case Country:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            case District:
+                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                break;
+
+            default:
+                sqlArgs = "";
+                break;
+        }
+
+        // adding a limit amount to a query
+        String topArgs = "";
+        if(topAmt != null)
+        {
+            topArgs = "LIMIT " + topAmt.toString();
+        }
+
+        // specify differnet types
+        if(_qtype == QType.Country)
+        {
+            try {
+                ArrayList<Country> countries = new ArrayList<>();
+
+                // Create an SQL statement
+                Statement stmt = con.createStatement();
+                // Create string for SQL statement
+                String strSelect =
+                        "SELECT  * FROM country "
+                            + sqlArgs
+                            + " order by population desc "
+                            + topArgs
+                        ;
+                System.out.println("SQL statement: " + strSelect);
+
+                // Execute SQL statement
+                ResultSet rset = stmt.executeQuery(strSelect);
+                // Return new employee if valid.
+                // Check one is returned
+                while (rset.next()) {
+
+                    Country country = new Country();
+                    country.code = rset.getString("code");
+                    country.name = rset.getString("name");
+                    country.population = rset.getInt("population");
+
+                    countries.add(country);
+                }
+                return new ArrayList<>(countries);
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+                System.out.println("Failed to get " + _qtype + " details");
+                return null;
+            }
+        }
+        else if (_qtype == QType.City)
+        {
+            try {
+                ArrayList<City> cities = new ArrayList<>();
+
+                // Create an SQL statement
+                Statement stmt = con.createStatement();
+                // Create string for SQL statement
+                String strSelect =
+                        "SELECT  * FROM city "
+                                + sqlArgs
+                                + " order by population desc "
+                                + topArgs
+                        ;
+
+                System.out.println("SQL statement: " + strSelect);
+
+                // Execute SQL statement
+                ResultSet rset = stmt.executeQuery(strSelect);
+                // Return new employee if valid.
+                // Check one is returned
+                while (rset.next()) {
+
+                    City city = new City();
+                    city.country_code = rset.getString("countrycode");
+                    city.name = rset.getString("name");
+                    city.population = rset.getInt("population");
+
+                    cities.add(city);
+                }
+                return new ArrayList<>(cities);
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+                System.out.println("Failed to get " + _qtype + " details");
+                return null;
+            }
+
+        }
+        else if (_qtype == QType.CapitalCities)
+        {
+            // tested query
+
+            // SELECT city.id, city.name, city.Population AS `city population`, country.Population AS `country pop`
+            //FROM country
+            //LEFT JOIN city ON city.ID = country.Capital
+            //
+            //order BY city.Population DESC
+            //LIMIT 10
+
+
+            try {
+                ArrayList<City> capitalCities = new ArrayList<>();
+
+                // Create an SQL statement
+                Statement stmt = con.createStatement();
+                // Create string for SQL statement
+                String strSelect =
+
+                        "SELECT * FROM city Left Join country ON city.ID = country.Capital "
+                                + sqlArgs
+                                + " order by city.population desc "
+                                + topArgs
+                        ;
+
+                System.out.println("SQL statement: " + strSelect);
+
+                // Execute SQL statement
+                ResultSet rset = stmt.executeQuery(strSelect);
+                // Return new employee if valid.
+                // Check one is returned
+                while (rset.next()) {
+
+                    City city = new City();
+                    city.country_code = rset.getString("countrycode");
+                    city.name = rset.getString("name");
+                    city.population = rset.getInt("population");
+
+                    capitalCities.add(city);
+                }
+                return new ArrayList<>(capitalCities);
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+                System.out.println("Failed to get " + _qtype + " details");
+                return null;
+            }
+
+        }
+        else
+        {
+            System.out.println("Qtype invalid: " + _qtype );
             return null;
         }
-    }
-
-    public void displayAllCountiresBySize(ArrayList<Country> countries)
-    {
-        System.out.println("size of list" + countries.size());
-
-
-        for (Country i : countries) {
-            System.out.println(i.name + " " + i.population);
-        }
-
-
-
-
-
-
-    }
+    } // end of GetQTypeByPopSize
 
 
 

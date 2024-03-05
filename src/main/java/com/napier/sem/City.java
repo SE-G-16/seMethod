@@ -29,4 +29,10 @@ public class City {
      */
     public int population;
 
+    @Override
+    public String toString() {
+
+        return "City: " + name + " " +  population;
+    }
+
 }

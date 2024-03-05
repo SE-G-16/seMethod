@@ -27,13 +27,15 @@ public class SqlApp
     /**
      * Connection to MySQL database.
      */
-    private Connection con = null;
+    public static Connection con = null;
 
     /**
      * Connect to the MySQL database.
      */
     public void connect()
     {
+
+
         // attempting to connect
         System.out.println("Attempting to connect to database...");
         try
@@ -163,12 +165,14 @@ public class SqlApp
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT code, name, continent, region, "
+                    /*"SELECT code, name, continent, region, "
             + "surfacearea, indepYear, population, lifeexpectancy, "
             + "gnp, gnpold , localname, governmentform, "
-            + "headofstate, capital, code2 "
+            + "headofstate, capital, code2 "*/
+
+                            "SELECT * "
+
                             + "FROM country "
-                            //+ "WHERE code =  'CUB'";
                             + "WHERE code =  '" + _code + "'";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);

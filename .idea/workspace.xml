@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="more database connection debugging changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
-    </list>
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,7 +276,7 @@
       <workItem from="1708458002745" duration="11000" />
       <workItem from="1708594395029" duration="3650000" />
       <workItem from="1708600691764" duration="4352000" />
-      <workItem from="1709714816282" duration="12635000" />
+      <workItem from="1709714816282" duration="13319000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -554,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709725156541</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary">
+      <option name="closed" value="true" />
+      <created>1709727675138</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709727675138</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a Use Case for HR for the continent by population size" />
     <MESSAGE value="Created a Use Case for HR for the cities by population size" />
     <MESSAGE value="Created a Use Case for HR for the countries by population size" />
     <MESSAGE value="Created user folder&#10;created user stories &#10;created user diagrams" />
@@ -598,7 +601,8 @@
     <MESSAGE value="Changed test location&#10;Added some static strings to stop human error" />
     <MESSAGE value="database connection debugging changes" />
     <MESSAGE value="more database connection debugging changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="more database connection debugging changes" />
+    <MESSAGE value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

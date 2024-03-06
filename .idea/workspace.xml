@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added AppTest.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +90,8 @@
     "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.testGetCountry.executor": "Run",
     "JUnit.CityTest.executor": "Run",
     "JUnit.CityTest.testGetCity.executor": "Run",
     "JUnit.CountryTest.executor": "Run",
@@ -136,7 +141,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.AppTest.testGetCountry">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -146,6 +151,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testGetCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="METHOD_NAME" value="testGetCountry" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,37 +217,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CountryTest.testGetCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryTest" />
-      <option name="METHOD_NAME" value="testGetCountry" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -232,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.testGetCountry" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.CityTest.testGetCity" />
         <item itemvalue="JUnit.CityTest" />
-        <item itemvalue="JUnit.CountryTest" />
-        <item itemvalue="JUnit.CountryTest.testGetCountry" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +281,7 @@
       <workItem from="1708458002745" duration="11000" />
       <workItem from="1708594395029" duration="3650000" />
       <workItem from="1708600691764" duration="4352000" />
-      <workItem from="1709714816282" duration="13319000" />
+      <workItem from="1709714816282" duration="14653000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -558,7 +563,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709727675138</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added AppTest.java">
+      <option name="closed" value="true" />
+      <created>1709728416057</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709728416057</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +590,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created a Use Case for HR for the cities by population size" />
     <MESSAGE value="Created a Use Case for HR for the countries by population size" />
     <MESSAGE value="Created user folder&#10;created user stories &#10;created user diagrams" />
     <MESSAGE value="refractored user stories to MD file" />
@@ -602,7 +614,8 @@
     <MESSAGE value="database connection debugging changes" />
     <MESSAGE value="more database connection debugging changes" />
     <MESSAGE value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
+    <MESSAGE value="Added AppTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AppTest.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

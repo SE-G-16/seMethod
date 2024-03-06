@@ -1,8 +1,11 @@
 package com.napier.sem;
 
+import java.net.UnknownHostException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.net.InetAddress.getLocalHost;
 
 enum QType {
     Country,
@@ -29,8 +32,8 @@ public class SqlApp
     /**
      * Connect to the MySQL database.
      */
-    public void connect()
-    {
+    public void connect()  {
+
 
 
         // attempting to connect

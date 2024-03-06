@@ -1,10 +1,13 @@
 package com.napier.sem;
 
+import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static java.net.InetAddress.getLocalHost;
 
 public class App {
 
@@ -16,7 +19,10 @@ public class App {
     public static String LocationDBStr = "db:3306";
     public static String LocationLocalhostStr = "localhost:3306";
 
-    public void connect(String location, int delay) {
+    public void connect(String location, int delay) throws UnknownHostException {
+
+        System.out.println("HOSTNAME: " + getLocalHost(). getHostName());
+
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,9 +38,11 @@ public class App {
                 // Wait a bit for db to start
                 Thread.sleep(delay);
                 // Connect to database
+
                 con = DriverManager.getConnection("jdbc:mysql://" + location
                                 + "/world?allowPublicKeyRetrieval=true&useSSL=false",
                         "root", "example");
+
 
 
 
@@ -72,20 +80,21 @@ public class App {
 
     // main entry point
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws UnknownHostException {
         // Create new Application and connect to database
         a = new App();
 
         System.out.println("Args length: " + args.length + " /args/ " + Arrays.toString(args));
-        if(args.length < 1){
+        /*if(args.length < 1){
             // localhost:3306
             a.connect(LocationLocalhostStr, 0);
 
         }else{
             // db:3306
             a.connect(LocationDBStr, 3000);
-        }
+        }*/
+
+        a.connect(LocationDBStr, 3000);
 
         // get all countries in world by size  Query 1.
         ArrayList<Object> allCountries = s.GetQTypeByPopSize(QType.Country, Area.World, "", 300);

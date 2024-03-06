@@ -25,9 +25,6 @@ public class SqlApp
     //<editor-fold desc="connections methods>"
 
     /**
-     * Connection to MySQL database.
-     */
-    public static Connection con = null;
 
     /**
      * Connect to the MySQL database.
@@ -58,7 +55,7 @@ public class SqlApp
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                App.con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
@@ -81,12 +78,12 @@ public class SqlApp
     {
         // attempting to disconnect
         System.out.println("Attempting to disconnect to database...");
-        if (con != null)
+        if (App.con != null)
         {
             try
             {
                 // Close connection
-                con.close();
+                App.con.close();
             }
             catch (Exception e)
             {
@@ -106,7 +103,7 @@ public class SqlApp
         try
         {
             // Create an SQL statement
-            Statement stmt = con.createStatement();
+            Statement stmt = App.con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT id, name, CountryCode, district, population "
@@ -162,7 +159,7 @@ public class SqlApp
         try
         {
             // Create an SQL statement
-            Statement stmt = con.createStatement();
+            Statement stmt = App.con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     /*"SELECT code, name, continent, region, "
@@ -243,7 +240,7 @@ public class SqlApp
         try
         {
             // Create an SQL statement
-            Statement stmt = con.createStatement();
+            Statement stmt = App.con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT  countrycode, language, isofficial, percentage "
@@ -363,7 +360,7 @@ public class SqlApp
                 ArrayList<Country> countries = new ArrayList<>();
 
                 // Create an SQL statement
-                Statement stmt = con.createStatement();
+                Statement stmt = App.con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
                         "SELECT  * FROM country "
@@ -401,13 +398,13 @@ public class SqlApp
                 ArrayList<City> cities = new ArrayList<>();
 
                 // Create an SQL statement
-                Statement stmt = con.createStatement();
+                Statement stmt = App.con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
                         "SELECT  * FROM city left join country on city.ID = country.capital "
 
                                 + sqlArgs
-                                + " order by population desc "
+                                + " order by city.population desc "
                                 + topArgs
                         ;
 
@@ -452,7 +449,7 @@ public class SqlApp
                 ArrayList<City> capitalCities = new ArrayList<>();
 
                 // Create an SQL statement
-                Statement stmt = con.createStatement();
+                Statement stmt = App.con.createStatement();
                 // Create string for SQL statement
                 String strSelect =
 

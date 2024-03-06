@@ -17,10 +17,9 @@ public class App {
         // Create new Application and connect to database
         App a = new App();
 
-
-
         if(args.length < 1){
-            a.connect("localhost:3306", 30000);
+            //a.connect("localhost:3306", 30000);
+            a.connect("db:3306", 30000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
@@ -47,7 +46,7 @@ public class App {
         ArrayList<Object> Query7 = s.GetQTypeByPopSize(QType.City, Area.World, "", 15);
 
         // get all cities in a specific continent by size Query 8
-        ArrayList<Object> allCities = s.GetQTypeByPopSize(QType.City, Area.Continent, "Europe", 15);
+        ArrayList<Object> Query8 = s.GetQTypeByPopSize(QType.City, Area.Continent, "Europe", 15);
 
         // get all capitals in a specific continent by size Query 10
         ArrayList<Object> allCapitals = s.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 15);
@@ -82,7 +81,7 @@ public class App {
         s.displayObjects(Query7);
 
         System.out.println("\n(Query8)Cities by Pop desc\n");
-        s.displayObjects(allCities);
+        s.displayObjects(Query8);
 
         System.out.println("\nCapitals by Pop desc\n");
         s.displayObjects(allCapitals);
@@ -96,9 +95,6 @@ public class App {
 
         // Disconnect from database
         a.disconnect();
-        s.disconnect();
-        s = null;
-
 
     }
 
@@ -122,8 +118,7 @@ public class App {
                                 + "/world?allowPublicKeyRetrieval=true&useSSL=false",
                         "root", "example");
 
-                // naughty hack for child SqlApp class
-                SqlApp.con = con;
+
 
                 System.out.println("Successfully connected");
                 break;
@@ -146,8 +141,9 @@ public class App {
             {
                 // Close connection
                 con.close();
+
                 // safety check for naughty code
-                s.disconnect();
+                //s.disconnect();
             }
             catch (Exception e)
             {

@@ -55,13 +55,14 @@ public class SqlApp
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                App.con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+
+                App.con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
             catch (SQLException sqle)
             {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt inside SQLAPP " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             }
             catch (InterruptedException ie)

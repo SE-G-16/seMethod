@@ -19,6 +19,8 @@
 
 * Release [![Releases](https://img.shields.io/github/release/SE-G-16/seMethod/all.svg?style=flat-square)](https://github.com/SE-G-16/seMethod/releases)
 
+* Code Cov [![codecov](https://codecov.io/gh/SE-G-16/seMethod/graph/badge.svg?token=S12R1EHE7H)](https://codecov.io/gh/SE-G-16/seMethod)
+
 
 ---
 ## Some helpful commands when debugging or configuring docker files

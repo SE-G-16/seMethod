@@ -46,12 +46,8 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
-          token: ${{ 8def8995-0b19-43d0-a779-db170c00ec81 }}
+          token: ${{ secrets.CODECOV_TOKEN }}
           slug: SE-G-16/seMethod
-          directory: ./target/site/jacoco
-          flags: Integration Tests # optional
-          verbose: true # optional (default = false)
-
 
   build:
     name: Build and Start Using docker-compose

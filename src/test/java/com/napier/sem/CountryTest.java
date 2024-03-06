@@ -13,14 +13,14 @@ class CountryTest {
     static void init()
     {
         app = new App();
-        app.connect("localhost:3306", 30000);
+        app.connect(App.LocationLocalhostStr, 30000);
 
     }
 
     @Test
     void testGetCountry()
     {
-        Country country = app.s.getCountry("AND");
+        Country country = App.s.getCountry("AND");
         assertEquals(country.code, "AND");
         assertEquals(country.name, "Andorra");
         assertEquals(country.continent, "Europe");

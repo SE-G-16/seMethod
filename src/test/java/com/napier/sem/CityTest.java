@@ -12,14 +12,14 @@ class CityTest {
     static void init()
     {
         app = new App();
-        app.connect("localhost:3306", 30000);
+        app.connect(App.LocationLocalhostStr, 30000);
 
     }
 
     @Test
     void testGetCity()
     {
-        City city = app.s.getCity(3602);
+        City city = App.s.getCity(3602);
         assertEquals(city.name, "Vladivostok");
         assertEquals(city.country_code, "RUS");
         assertEquals(city.district, "Primorje");

@@ -10,6 +10,9 @@ public class App {
     public static Connection con = null;
     public static SqlApp s = new SqlApp();
 
+    public static String LocationStr = "db:3306";
+    public static String LocationLocalhostStr = "localhost:3306";
+
     // main entry point
 
     public static void main(String[] args)
@@ -19,7 +22,7 @@ public class App {
 
         if(args.length < 1){
             //a.connect("localhost:3306", 30000);
-            a.connect("db:3306", 30000);
+            a.connect(LocationStr, 30000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }

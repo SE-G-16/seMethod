@@ -32,7 +32,7 @@ public class SqlApp
     /**
      * Connect to the MySQL database.
      */
-    public void connect()  {
+    /*public void connect()  {
 
 
 
@@ -73,7 +73,7 @@ public class SqlApp
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
-    }
+    }*/
 
     /**
      * Disconnect from the MySQL database.
@@ -307,6 +307,8 @@ public class SqlApp
             for (Object i : objList) {
                 System.out.println(i.toString());
             }
+
+            System.out.println("\n----------------------------------------------\n");
 
         }
         else

@@ -18,7 +18,10 @@ enum Area {
     Continent,
     Region,
     Country,
-    District
+
+    District,
+
+
 }
 
 
@@ -325,26 +328,32 @@ public class SqlApp
     // areaStr = "Europe, Germany, etc"
     public ArrayList<Object> GetQTypeByPopSize (QType _qtype, Area _area, String areaStr, Integer topAmt)
     {
+        //System.out.println("/ " + _qtype +" / " + _area + " / " + areaStr + " / " + topAmt);
+        String _clmName = (_area == Area.Country) ? "country.name" : _area.toString();
+        //System.out.println("column name passed: " + _clmName);
+
         String sqlArgs = "";
+
         switch (_area) {
             case World:
                 sqlArgs = "";
                 break;
 
             case Continent:
-                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                sqlArgs = "where " + _clmName + " = '" + areaStr + "'";
                 break;
 
             case Region:
-                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                sqlArgs = "where " + _clmName + " = '" + areaStr + "'";
                 break;
 
             case Country:
-                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+
+                sqlArgs = "where " + _clmName + " = '" + areaStr + "'";
                 break;
 
             case District:
-                sqlArgs = "where " + _area + " = '" + areaStr + "'";
+                sqlArgs = "where " + _clmName + " = '" + areaStr + "'";
                 break;
 
             default:
@@ -370,6 +379,7 @@ public class SqlApp
                 // Create string for SQL statement
                 String strSelect =
                         "SELECT  * FROM country "
+
                             + sqlArgs
                             + " order by population desc "
                             + topArgs
@@ -400,6 +410,8 @@ public class SqlApp
         }
         else if (_qtype == QType.City)
         {
+
+
             try {
                 ArrayList<City> cities = new ArrayList<>();
 
@@ -497,10 +509,49 @@ public class SqlApp
         }
     } // end of GetQTypeByPopSize
 
+    public ArrayList<Object> GetPopInVOutCity(Area _area)
+    {
+        try {
+            ArrayList<City> popOfCitiesInACountry = new ArrayList<>();
 
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT sum(city.Population) FROM country " +
+                            "LEFT JOIN city ON country.Code = city.CountryCode " +
+                            " WHERE country.code = 'AFG' " +
+                            "GROUP BY country.code, city.Population " +
+                            ""
 
+                            //+ sqlArgs
 
+                            //+ topArgs
+                    ;
 
+            System.out.println("SQL statement: " + strSelect);
 
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
 
-}
+                City city = new City();
+                city.country_code = rset.getString("countrycode");
+                city.name = rset.getString("name");
+                city.population = rset.getInt("population");
+
+                popOfCitiesInACountry.add(city);
+            }
+            return new ArrayList<>(popOfCitiesInACountry);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            //System.out.println("Failed to get " + _qtype + " details");
+            return null;
+        }
+
+    } // end GetPopInVOutCity()
+
+} // end SqlApp

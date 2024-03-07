@@ -24,6 +24,7 @@ class AppTest {
     {
         Country country = App.s.getCountry("AND");
 
+        // null check
         if(country != null)
         {
             assertEquals(country.code, "AND");

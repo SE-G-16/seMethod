@@ -124,6 +124,8 @@ public class App {
         // get all cities in a specific continent by size Query 9
         ArrayList<Object> Query9 = s.GetQTypeByPopSize(QType.City, Area.Region, "Western Europe", 25);
 
+        // get all cities in a specific continent by size Query 10
+        ArrayList<Object> Query10 = s.GetQTypeByPopSize(QType.City, Area.Country, "Iran", 25);
 
         //examples
         // get all capitals in a specific continent by size Query 10
@@ -163,6 +165,9 @@ public class App {
 
         System.out.println("\n\n(Query9 - City, Region, Western Europe, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query9);
+
+        System.out.println("\n\n(Query10 - City, Country, Iran, LIMIT 25) Cities by Pop desc");
+        s.displayObjects(Query10);
 
 
 

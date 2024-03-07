@@ -509,48 +509,111 @@ public class SqlApp
         }
     } // end of GetQTypeByPopSize
 
-    public ArrayList<Object> GetPopInVOutCity(Area _area)
+    public void GetPopInVOutCity(Area _area, String _areaStr)
     {
-        try {
-            ArrayList<City> popOfCitiesInACountry = new ArrayList<>();
+        Integer cityTotal = 0;
+        Integer totalPopulation = 0;
 
+        //System.out.println("/ " + _qtype +" / " + _area + " / " + areaStr + " / " + topAmt);
+        String _clmName = (_area == Area.Country) ? "country.name" : _area.toString();
+
+        //System.out.println("column name passed: " + _clmName);
+
+        String sqlArgs = "";
+
+        switch (_area) {
+            case World:
+                sqlArgs = "";
+                break;
+
+            case Continent:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case Region:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case Country:
+
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case District:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            default:
+                sqlArgs = "";
+                break;
+        }
+
+        // get population of just cities
+        try {
             // Create an SQL statement
             Statement stmt = App.con.createStatement();
             // Create string for SQL statement
-            String strSelect =
-                    "SELECT sum(city.Population) FROM country " +
-                            "LEFT JOIN city ON country.Code = city.CountryCode " +
-                            " WHERE country.code = 'AFG' " +
-                            "GROUP BY country.code, city.Population " +
+            String cityPopSelect =
+                    "SELECT sum(city.Population) as cityPop " +
+                            " FROM country " +
+                            " LEFT JOIN city ON country.Code = city.CountryCode " +
+                            sqlArgs +
+
+                            " GROUP BY country.code, city.Population " +
                             ""
 
-                            //+ sqlArgs
-
-                            //+ topArgs
+                    //+ sqlArgs
+                    //+ topArgs
                     ;
 
-            System.out.println("SQL statement: " + strSelect);
+            System.out.println("SQL statement: " + cityPopSelect);
 
             // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
+            ResultSet rset = stmt.executeQuery(cityPopSelect);
             // Return new employee if valid.
             // Check one is returned
             while (rset.next()) {
 
-                City city = new City();
-                city.country_code = rset.getString("countrycode");
-                city.name = rset.getString("name");
-                city.population = rset.getInt("population");
-
-                popOfCitiesInACountry.add(city);
+                cityTotal += rset.getInt("cityPop");
             }
-            return new ArrayList<>(popOfCitiesInACountry);
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
             //System.out.println("Failed to get " + _qtype + " details");
-            return null;
         }
+
+        // get total population
+        try {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String countryPopByArea =
+                    "SELECT country.Population as totalPop, country.name, country.Continent " +
+                            " FROM country " +
+                            " LEFT JOIN city ON country.Code = city.CountryCode " +
+                            sqlArgs +
+                            " GROUP BY country.name, totalPop, country.Continent ";
+
+            //+ sqlArgs
+            //+ topArgs
+            ;
+
+            System.out.println("SQL statement: " + countryPopByArea);
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(countryPopByArea);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                totalPopulation += rset.getInt("totalPop");
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            //System.out.println("Failed to get " + _qtype + " details");
+        }
+        System.out.println(" totalpop => " + totalPopulation + "  :in cities => " + cityTotal + " :out of cities => " + (totalPopulation - cityTotal));
 
     } // end GetPopInVOutCity()
 

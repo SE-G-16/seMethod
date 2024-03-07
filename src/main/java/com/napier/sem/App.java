@@ -244,6 +244,12 @@ public class App {
         System.out.println("\n\n(Query 22 - CapitalCities, Region, LIMIT 25 ) CapitalCities in the Region by N");
         s.displayObjects(Query22);
 
+        s.GetPopInVOutCity(Area.Continent , "Africa");
+        s.GetPopInVOutCity(Area.Continent , "Europe");
+        s.GetPopInVOutCity(Area.Region , "Southern Africa");
+        s.GetPopInVOutCity(Area.Country , "France");
+
+
 
 
 

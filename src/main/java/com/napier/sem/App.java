@@ -244,9 +244,13 @@ public class App {
         System.out.println("\n\n(Query 22 - CapitalCities, Region, LIMIT 25 ) CapitalCities in the Region by N");
         s.displayObjects(Query22);
 
+        System.out.println("\n\n(Query 23 - Population Sizes, Continent,) population of people, people living in cities, and people not living in cities in each Continent");
         s.GetPopInVOutCity(Area.Continent , "Africa");
-        s.GetPopInVOutCity(Area.Continent , "Europe");
+
+        System.out.println("\n\n(Query 24 - Population Sizes, Region, ) population of people, people living in cities, and people not living in cities in each Region");
         s.GetPopInVOutCity(Area.Region , "Southern Africa");
+
+        System.out.println("\n\n(Query 25 - Population Sizes, Country,) population of people, people living in cities, and people not living in cities in each Country");
         s.GetPopInVOutCity(Area.Country , "France");
 
 

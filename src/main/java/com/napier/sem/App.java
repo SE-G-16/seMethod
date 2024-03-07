@@ -125,7 +125,45 @@ public class App {
         ArrayList<Object> Query9 = s.GetQTypeByPopSize(QType.City, Area.Region, "Western Europe", 25);
 
         // get all cities in a specific continent by size Query 10
-        ArrayList<Object> Query10 = s.GetQTypeByPopSize(QType.City, Area.Country, "Iran", 25);
+        ArrayList<Object> Query10 = s.GetQTypeByPopSize(QType.City, Area.Country, "Japan", 25);
+
+        // get all cities in a specific continent by size Query 11
+        ArrayList<Object> Query11 = s.GetQTypeByPopSize(QType.City, Area.District, "Yunnan", 25);
+
+        // get all cities in a specific continent by size Query 12
+        ArrayList<Object> Query12 = s.GetQTypeByPopSize(QType.City, Area.World, "", 25);
+
+        // get all cities in a specific continent by size Query 13
+        ArrayList<Object> Query13 = s.GetQTypeByPopSize(QType.City, Area.Continent, "Asia", 25);
+
+        // get all cities in a specific continent by size Query 14
+        ArrayList<Object> Query14 = s.GetQTypeByPopSize(QType.City, Area.Region, "Caribbean", 25);
+
+        // get all cities in a specific continent by size Query 15
+        ArrayList<Object> Query15 = s.GetQTypeByPopSize(QType.City, Area.Country, "France", 25);
+
+        // get all cities in a specific continent by size Query16
+        ArrayList<Object> Query16 = s.GetQTypeByPopSize(QType.City, Area.District, "New York", 25);
+
+        // get all cities in a specific continent by size Query17
+        ArrayList<Object> Query17 = s.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 25);
+
+        // get all cities in a specific continent by size Query18
+        ArrayList<Object> Query18 = s.GetQTypeByPopSize(QType.CapitalCities, Area.Continent, "Africa", 25);
+
+        // get all cities in a specific continent by size Query19
+        ArrayList<Object> Query19 = s.GetQTypeByPopSize(QType.CapitalCities, Area.Region, "North America", 25);
+
+        // get all cities in a specific continent by size Query 20
+        ArrayList<Object> Query20 = s.GetQTypeByPopSize(QType.CapitalCities, Area.World, "", 25);
+
+        // get all cities in a specific continent by size Query 21
+        ArrayList<Object> Query21 = s.GetQTypeByPopSize(QType.CapitalCities, Area.Continent, "Europe", 25);
+
+        // get all cities in a specific continent by size Query 22
+        ArrayList<Object> Query22 = s.GetQTypeByPopSize(QType.CapitalCities, Area.Region, "South America", 25);
+
+
 
         //examples
         // get all capitals in a specific continent by size Query 10
@@ -166,8 +204,52 @@ public class App {
         System.out.println("\n\n(Query9 - City, Region, Western Europe, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query9);
 
-        System.out.println("\n\n(Query10 - City, Country, Iran, LIMIT 25) Cities by Pop desc");
+        System.out.println("\n\n(Query10 - City, Country, Japan, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query10);
+
+        System.out.println("\n\n(Query11 - City, Country, Yunnan, LIMIT 25) Cities by Pop desc");
+        s.displayObjects(Query11);
+
+        System.out.println("\n\n(Query 12 - City, World, LIMIT 25 ) Cities in the world by N");
+        s.displayObjects(Query12);
+
+        System.out.println("\n\n(Query 13 - City, Continent, LIMIT 25 ) Cities in the world by N");
+        s.displayObjects(Query13);
+
+        System.out.println("\n\n(Query 14 - City, Region, LIMIT 25 ) Cities in the world by N");
+        s.displayObjects(Query14);
+
+        System.out.println("\n\n(Query 15 - City, Country, LIMIT 25 ) Cities in the world by N");
+        s.displayObjects(Query15);
+
+
+        System.out.println("\n\n(Query 16- City, District, LIMIT 25 ) Cities in the world by N");
+        s.displayObjects(Query16);
+
+        System.out.println("\n\n(Query 17 - CapitalCities , World, LIMIT 100 ) Capital Cities in the world organised by largest population to smallest");
+        s.displayObjects(Query17);
+
+        System.out.println("\n\n(Query 18- CapitalCities, Continent , LIMIT 100 ) Capital Cities in the  Continent organised by largest population to smallest");
+        s.displayObjects(Query18);
+
+        System.out.println("\n\n(Query 19 - CapitalCities, Region, LIMIT 100 ) Capital Cities in the Region organised by largest population to smallest");
+        s.displayObjects(Query19);
+
+        System.out.println("\n\n(Query 20 - CapitalCities, World, LIMIT 25 ) CapitalCities in the world by N");
+        s.displayObjects(Query20);
+
+        System.out.println("\n\n(Query 21 - CapitalCities, Continent, LIMIT 25 ) CapitalCities in the Continent by N");
+        s.displayObjects(Query21);
+
+        System.out.println("\n\n(Query 22 - CapitalCities, Region, LIMIT 25 ) CapitalCities in the Region by N");
+        s.displayObjects(Query22);
+
+
+
+
+
+
+
 
 
 

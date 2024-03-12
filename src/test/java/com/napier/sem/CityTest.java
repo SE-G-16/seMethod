@@ -8,6 +8,9 @@ import java.net.UnknownHostException;
 import static org.junit.jupiter.api.Assertions.*;
 class CityTest {
 
+    //City cty = new City();
+    //city.name = "Scotland";
+
     static App app = new App();
 
     @BeforeAll
@@ -22,6 +25,8 @@ class CityTest {
 
         if(city != null)
         {
+
+            assertEquals(city.id, 3602);
             assertEquals(city.name, "Vladivostok");
             assertEquals(city.country_code, "RUS");
             assertEquals(city.district, "Primorje");
@@ -35,5 +40,7 @@ class CityTest {
 
 
     }
+
+
   
 }

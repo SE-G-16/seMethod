@@ -11,6 +11,7 @@ class AppTest {
 
     static App app;
 
+
     @BeforeAll
     static void init() throws UnknownHostException {
 
@@ -18,6 +19,23 @@ class AppTest {
         app.connect(App.LocationLocalhostStr, 3000);
 
     }
+
+
+    @Test
+    void testSystemOut()
+    {
+        System.out.println("hello");
+        assertSame(System.in.toString(), "hello");
+
+    }
+
+    @Test
+    void testQtypeEnum()
+    {
+        var qnum = QType.Country;
+        assertEquals( qnum.toString(), "Country");
+    }
+
 
     @Test
     void testGetCountry()

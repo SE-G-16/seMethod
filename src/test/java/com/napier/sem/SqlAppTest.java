@@ -2,6 +2,8 @@ package com.napier.sem;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 import java.net.UnknownHostException;
@@ -59,6 +61,55 @@ class SqlAppTest {
         {
             System.out.println("city or app is null");
         }
+
+    }
+
+    @Test
+    void sqlQuerytest()
+    {
+
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  countrycode, language, isofficial, percentage "
+                            + "FROM countrylanguage "
+                            //+ "WHERE code =  'CUB'";
+                            + "WHERE isofficial = 'T'";
+
+            //
+
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                CountryLanguage countryLanguage = new CountryLanguage();
+                countryLanguage.country_code = rset.getString("countrycode");
+                countryLanguage.language = rset.getString("language");
+                countryLanguage.is_official = rset.getString("isofficial");
+                countryLanguage.percentage = rset.getDouble("percentage");
+
+                System.out.println(countryLanguage.country_code);
+
+                assertEquals("Dutch", countryLanguage.language);
+            }
+            else
+                System.out.println("else failed");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country language details");
+
+        }
+
+
+
 
     }
 

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Country Language Test Commit">
-      <change afterPath="$PROJECT_DIR$/db_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added a tostring test to country">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +90,6 @@
     "JUnit.AppTest.testSystemOut.executor": "Run",
     "JUnit.CityTest.executor": "Run",
     "JUnit.CityTest.testGetCity.executor": "Run",
-    "JUnit.CountryLanguageTest.testGetCity.executor": "Run",
-    "JUnit.CountryLanguageTest.testGetCountryOfficialLanguage.executor": "Run",
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
     "JUnit.CountryTest.testGetString.executor": "Run",
@@ -146,8 +142,8 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CountryLanguageTest.testGetCity">
-    <configuration name="CountryLanguageTest.testGetCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CountryTest.testGetString">
+    <configuration name="AppTest.testSqlApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -156,24 +152,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryLanguageTest" />
-      <option name="METHOD_NAME" value="testGetCity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CountryLanguageTest.testGetCountryOfficialLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryLanguageTest" />
-      <option name="METHOD_NAME" value="testGetCountryOfficialLanguage" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="METHOD_NAME" value="testSqlApp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,6 +207,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SqlAppTest.testSystemOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testSystemOut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -247,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CountryLanguageTest.testGetCity" />
-        <item itemvalue="JUnit.CountryLanguageTest.testGetCountryOfficialLanguage" />
         <item itemvalue="JUnit.CountryTest.testGetString" />
         <item itemvalue="JUnit.SqlAppTest.testGetCity" />
         <item itemvalue="JUnit.SqlAppTest.testAreaEnum" />
+        <item itemvalue="JUnit.AppTest.testSqlApp" />
+        <item itemvalue="JUnit.SqlAppTest.testSystemOut" />
       </list>
     </recent_temporary>
   </component>
@@ -683,6 +679,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added a new MongoApp class and created a db connection code" />
     <MESSAGE value="Version 0.1.0.3&#10;Updated README for other branches" />
     <MESSAGE value="&#10;Updated README for other branches" />
     <MESSAGE value="Update README.md" />
@@ -707,8 +704,7 @@
     <MESSAGE value="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity" />
     <MESSAGE value="Added more unit test &#10;&#10;slight change to testGetCity" />
     <MESSAGE value="Added a tostring test to country" />
-    <MESSAGE value="Country Language Test Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Country Language Test Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a tostring test to country" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -717,15 +713,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/napier/sem/City.java</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java</url>
-          <line>44</line>
-          <properties class="com.napier.sem.CountryLanguageTest" method="testGetCountryOfficialLanguage">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

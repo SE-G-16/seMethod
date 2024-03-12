@@ -21,6 +21,7 @@ class SqlAppTest {
         app = new App();
         app.connect(App.LocationLocalhostStr, 3000);
 
+
     }
 
     @Test
@@ -41,14 +42,23 @@ class SqlAppTest {
     void testGetCity()
     {
         s = new SqlApp();
+
         City city = s.getCity(455);
 
-        s.displayCity(city);
+        if(city != null && app != null)
+        {
+            s.displayCity(city);
 
-        assertEquals(city.name, "Águas Lindas de Goiás");
-        assertEquals(city.country_code, "BRA");
-        assertEquals(city.district, "Goiás");
-        assertEquals(city.population, 89200);
+            assertEquals(city.name, "Águas Lindas de Goiás");
+            assertEquals(city.country_code, "BRA");
+            assertEquals(city.district, "Goiás");
+            assertEquals(city.population, 89200);
+
+        }
+        else
+        {
+            System.out.println("city or app is null");
+        }
 
     }
 

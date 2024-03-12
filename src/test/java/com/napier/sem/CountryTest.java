@@ -58,5 +58,12 @@ class CountryTest {
         }
     }
 
+    @Test
+    void testGetString()
+    {
+        Country mex = App.s.getCountry("MEX");
+        assertEquals(mex.toString(), "Country: Mexico  Pop: 98881000");
+    }
+
 
 }

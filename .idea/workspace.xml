@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more unit test &#10;App&#10;Area">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +91,7 @@
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
     "JUnit.SqlAppTest.executor": "Run",
+    "JUnit.SqlAppTest.testAreaEnum.executor": "Run",
     "JUnit.SqlAppTest.testGetCity.executor": "Run",
     "JUnit.SqlAppTest.testSystemOut.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
@@ -624,7 +623,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710238797099</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity">
+      <option name="closed" value="true" />
+      <created>1710239594711</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710239594711</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +650,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated README.md with names a development build" />
     <MESSAGE value="Updated README.md with repo links" />
     <MESSAGE value="Updated pom.xml with mongodb dependencies" />
     <MESSAGE value="Added a new MongoApp class and created a db connection code" />
@@ -668,7 +674,8 @@
     <MESSAGE value="Removed 1 test that was breaking app" />
     <MESSAGE value="diabled system out test as was not working properly" />
     <MESSAGE value="Added more unit test &#10;App&#10;Area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more unit test &#10;App&#10;Area" />
+    <MESSAGE value="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

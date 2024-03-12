@@ -3,7 +3,7 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
+
 import java.net.UnknownHostException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +12,7 @@ class SqlAppTest {
 
 
     static App app;
+    static SqlApp s;
 
 
     @BeforeAll
@@ -39,8 +40,10 @@ class SqlAppTest {
     @Test
     void testGetCity()
     {
-        City city = app.s.getCity(455);
-        app.s.displayCity(city);
+        s = new SqlApp();
+        City city = s.getCity(455);
+
+        s.displayCity(city);
 
         assertEquals(city.name, "Águas Lindas de Goiás");
         assertEquals(city.country_code, "BRA");

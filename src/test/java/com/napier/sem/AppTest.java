@@ -36,6 +36,19 @@ class AppTest {
         assertEquals( qnum.toString(), "Country");
     }
 
+    @Test
+    void testAreaEnum()
+    {
+        var area = Area.Continent;
+        assertEquals( area.toString(), "Continent");
+    }
+
+    @Test
+    void testSqlApp()
+    {
+        assertNotEquals(app, null);
+    }
+
 
     @Test
     void testGetCountry()

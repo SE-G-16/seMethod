@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added Some basic unit test to increase codecov score">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Removed 1 test that was breaking app">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -598,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710237320191</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Removed 1 test that was breaking app">
+      <option name="closed" value="true" />
+      <created>1710237669209</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237669209</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refractored user stories to MD file" />
     <MESSAGE value="created the population" />
     <MESSAGE value="updated the use cases and diagrams" />
     <MESSAGE value="Updated README.md with names a development build" />
@@ -642,7 +650,8 @@
     <MESSAGE value="Added AppTest.java" />
     <MESSAGE value="Added Code Coverage Badge" />
     <MESSAGE value="Added Some basic unit test to increase codecov score" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Some basic unit test to increase codecov score" />
+    <MESSAGE value="Removed 1 test that was breaking app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed 1 test that was breaking app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

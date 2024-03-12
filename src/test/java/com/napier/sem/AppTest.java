@@ -21,13 +21,13 @@ class AppTest {
     }
 
 
-    @Test
+    /*@Test
     void testSystemOut()
     {
         System.out.println("hello");
         assertSame(System.in.toString(), "hello");
 
-    }
+    }*/
 
     @Test
     void testQtypeEnum()

@@ -34,6 +34,29 @@ class CountryTest {
 
 
     }
+    @Test
+    void testDisplayCountry() {
+        Country cou = App.s.getCountry("CAN");
+
+
+        if (cou != null) {
+
+            App.s.displayCountry(cou);
+            assertEquals(cou.name, "Canada");
+            assertEquals(cou.continent, "North America");
+            assertEquals(cou.region, "North America");
+            assertEquals(cou.surface_area.doubleValue(), 9970610.0);
+            assertEquals(cou.independence_year.intValue(), 1867);
+            assertEquals(cou.population, 31147000);
+            assertEquals(cou.life_expectancy.doubleValue(), 79.4);
+            assertEquals(cou.gnp.doubleValue(), 598862.0);
+            assertEquals(cou.local_name, "Canada");
+            assertEquals(cou.government_type, "Constitutional Monarchy, Federation");
+            assertEquals(cou.head_of_state, "Elisabeth II");
+            assertEquals(cou.capital, 1822);
+            assertEquals(cou.code_two, "CA");
+        }
+    }
 
 
 }

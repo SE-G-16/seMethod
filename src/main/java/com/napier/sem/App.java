@@ -253,6 +253,38 @@ public class App {
         System.out.println("\n\n(Query 25 - Population Sizes, Country,) population of people, people living in cities, and people not living in cities in each Country");
         s.GetPopInVOutCity(Area.Country , "France");
 
+        // overall population reports
+        System.out.println("\n Overall Population \n");
+        // get population method not created yet
+        // display population
+
+        // overall langaugaes reports
+        System.out.println("\n Languages Report: \n");
+        // get langauges method not created yet
+        // display langauges
+
+
+        // country report
+        System.out.println("\n Country Report:\n");
+        // get country
+        // gdisplay country
+
+
+        // city report
+        System.out.println("\n City Report:\n");
+        // get country
+        // gdisplay country
+
+
+        // capital report
+        System.out.println("\n Capital Report:\n");
+        // get capital
+        // display capitial
+
+
+
+
+
 
 
 

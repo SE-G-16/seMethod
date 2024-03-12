@@ -22,8 +22,6 @@ class SqlAppTest {
 
     }
 
-
-
     @Test
     void testQtypeEnum()
     {
@@ -31,10 +29,24 @@ class SqlAppTest {
         assertEquals( qnum.toString(), "Country");
     }
 
+    @Test
     void testAreaEnum()
     {
         var area = Area.Continent;
         assertEquals( area.toString(), "Continent");
+    }
+
+    @Test
+    void testGetCity()
+    {
+        City city = app.s.getCity(455);
+        app.s.displayCity(city);
+
+        assertEquals(city.name, "Águas Lindas de Goiás");
+        assertEquals(city.country_code, "BRA");
+        assertEquals(city.district, "Goiás");
+        assertEquals(city.population, 89200);
+
     }
 
 }

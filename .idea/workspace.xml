@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="diabled system out test as was not working properly">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more unit test &#10;App&#10;Area">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +93,7 @@
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
     "JUnit.SqlAppTest.executor": "Run",
+    "JUnit.SqlAppTest.testGetCity.executor": "Run",
     "JUnit.SqlAppTest.testSystemOut.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
     "Maven.seMethods [package].executor": "Run",
@@ -140,23 +140,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.testSqlApp">
-    <configuration name="AppTest.testQtypeEnum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="testQtypeEnum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SqlAppTest.testAreaEnum">
     <configuration name="AppTest.testSqlApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -173,22 +157,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testSystemOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="testSystemOut" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SqlAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -200,6 +168,38 @@
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlAppTest.testAreaEnum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testAreaEnum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlAppTest.testGetCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testGetCity" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -240,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SqlAppTest.testAreaEnum" />
+        <item itemvalue="JUnit.SqlAppTest.testGetCity" />
         <item itemvalue="JUnit.AppTest.testSqlApp" />
         <item itemvalue="JUnit.SqlAppTest.testSystemOut" />
         <item itemvalue="JUnit.SqlAppTest" />
-        <item itemvalue="JUnit.AppTest.testQtypeEnum" />
-        <item itemvalue="JUnit.AppTest.testSystemOut" />
       </list>
     </recent_temporary>
   </component>
@@ -616,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710238058146</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added more unit test &#10;App&#10;Area">
+      <option name="closed" value="true" />
+      <created>1710238797099</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710238797099</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +643,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="updated the use cases and diagrams" />
     <MESSAGE value="Updated README.md with names a development build" />
     <MESSAGE value="Updated README.md with repo links" />
     <MESSAGE value="Updated pom.xml with mongodb dependencies" />
@@ -660,7 +667,8 @@
     <MESSAGE value="Added Some basic unit test to increase codecov score" />
     <MESSAGE value="Removed 1 test that was breaking app" />
     <MESSAGE value="diabled system out test as was not working properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="diabled system out test as was not working properly" />
+    <MESSAGE value="Added more unit test &#10;App&#10;Area" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more unit test &#10;App&#10;Area" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,14 +23,14 @@ class SqlAppTest {
     }
 
 
-    @Test
-    void testSystemOut() throws IOException {
+    //@Test
+    //void testSystemOut() throws IOException {
 
         //System.out.println("\b") ;
         //System.out.println("SqlApp hello");
         //assertSame(System.in.read(), "SqlApp hello");
 
-    }
+    //}
 
     @Test
     void testQtypeEnum()

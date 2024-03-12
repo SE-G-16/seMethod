@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added Code Coverage Badge">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added Some basic unit test to increase codecov score">
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +26,7 @@
     <option name="BRANCH" value="mysql/feature" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="new_functions" />
@@ -591,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709731006103</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added Some basic unit test to increase codecov score">
+      <option name="closed" value="true" />
+      <created>1710237320191</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237320191</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created user folder&#10;created user stories &#10;created user diagrams" />
     <MESSAGE value="refractored user stories to MD file" />
     <MESSAGE value="created the population" />
     <MESSAGE value="updated the use cases and diagrams" />
@@ -635,7 +641,8 @@
     <MESSAGE value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
     <MESSAGE value="Added AppTest.java" />
     <MESSAGE value="Added Code Coverage Badge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Code Coverage Badge" />
+    <MESSAGE value="Added Some basic unit test to increase codecov score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Some basic unit test to increase codecov score" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

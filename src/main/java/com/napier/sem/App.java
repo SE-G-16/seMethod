@@ -266,20 +266,20 @@ public class App {
 
         // country report
         System.out.println("\n Country Report:\n");
-        // get country
-        // gdisplay country
+        Country australia = s.getCountry("AUS");
+        s.displayCountry(australia);
 
 
         // city report
         System.out.println("\n City Report:\n");
-        // get country
-        // gdisplay country
+        City kabul = s.getCity(1);
+        s.displayCity(kabul);
 
 
         // capital report
         System.out.println("\n Capital Report:\n");
-        // get capital
-        // display capitial
+        City Delhi = s.getCity(1109);
+        s.displayCity(Delhi);
 
 
 

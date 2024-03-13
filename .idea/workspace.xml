@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Version 0.1.0.3&#10;Updated README for other branches">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="City Test Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +17,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Use Case" />
+        <option value="Dockerfile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="mysql/feature" />
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="release" />
+        <entry key="$PROJECT_DIR$" value="new_functions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +56,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -66,13 +76,38 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.App.executor": "Run",
     "Application.MongoApp.executor": "Run",
+    "Application.SqlApp.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Use Case",
+    "Docker.Docker Image.executor": "Run",
     "Docker.Dockerfile.executor": "Run",
+    "Docker.db/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.testGetCountry.executor": "Run",
+    "JUnit.AppTest.testQtypeEnum.executor": "Run",
+    "JUnit.AppTest.testSqlApp.executor": "Run",
+    "JUnit.AppTest.testSystemOut.executor": "Run",
+    "JUnit.CityTest.executor": "Run",
+    "JUnit.CityTest.testGetCity.executor": "Run",
+    "JUnit.CountryTest.executor": "Run",
+    "JUnit.CountryTest.testGetCountry.executor": "Run",
+    "JUnit.CountryTest.testGetString.executor": "Run",
+    "JUnit.SqlAppTest.executor": "Run",
+    "JUnit.SqlAppTest.sqlQuerytest.executor": "Run",
+    "JUnit.SqlAppTest.testAreaEnum.executor": "Run",
+    "JUnit.SqlAppTest.testGetCity.executor": "Run",
+    "JUnit.SqlAppTest.testSystemOut.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
     "Maven.seMethods [package].executor": "Run",
+    "Maven.seMethods [test].executor": "Run",
+    "Maven.seMethods [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -85,9 +120,14 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "two.files.diff.last.used.file": "C:/Users/anany/seMethod/use-cases/6.Top populated capital cities.puml",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -97,10 +137,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anany\seMethod\Userfiles" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.napier.sem" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MongoApp">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
+  <component name="RunManager" selected="JUnit.SqlAppTest.sqlQuerytest">
+    <configuration name="AppTest.testSqlApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -108,12 +153,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="METHOD_NAME" value="testSqlApp" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MongoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.MongoApp" />
+    <configuration name="CountryTest.testGetString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -121,15 +169,71 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryTest" />
+      <option name="METHOD_NAME" value="testGetString" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
+    <configuration name="SqlAppTest.sqlQuerytest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="sqlQuerytest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlAppTest.testAreaEnum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testAreaEnum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlAppTest.testGetCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testGetCity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
@@ -141,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.MongoApp" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.MongoApp" />
-        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.SqlAppTest.sqlQuerytest" />
+        <item itemvalue="JUnit.CountryTest.testGetString" />
+        <item itemvalue="JUnit.SqlAppTest.testGetCity" />
+        <item itemvalue="JUnit.SqlAppTest.testAreaEnum" />
+        <item itemvalue="JUnit.AppTest.testSqlApp" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +285,14 @@
       <workItem from="1707918946254" duration="1848000" />
       <workItem from="1707928037942" duration="1069000" />
       <workItem from="1707943733304" duration="259000" />
+      <workItem from="1708346476236" duration="12428000" />
+      <workItem from="1708458002745" duration="11000" />
+      <workItem from="1708594395029" duration="3650000" />
+      <workItem from="1708600691764" duration="4352000" />
+      <workItem from="1709714816282" duration="17189000" />
+      <workItem from="1709808469866" duration="1071000" />
+      <workItem from="1709810343996" duration="5949000" />
+      <workItem from="1710241413861" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />
@@ -366,7 +478,207 @@
       <option name="project" value="LOCAL" />
       <updated>1707944440665</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname">
+      <option name="closed" value="true" />
+      <created>1708347070241</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708347070241</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed">
+      <option name="closed" value="true" />
+      <created>1708350599529</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708350599529</updated>
+    </task>
+    <task id="LOCAL-00026" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1708352714856</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708352714856</updated>
+    </task>
+    <task id="LOCAL-00027" summary="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also">
+      <option name="closed" value="true" />
+      <created>1708353713470</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708353713470</updated>
+    </task>
+    <task id="LOCAL-00028" summary="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages">
+      <option name="closed" value="true" />
+      <created>1708355802461</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708355802461</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File">
+      <option name="closed" value="true" />
+      <created>1709653286699</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709653286699</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File&#10;Changed Disconnects logic">
+      <option name="closed" value="true" />
+      <created>1709654498340</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709654498340</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixed DB connection&#10;Fixed Query 8&#10;Fixed SQL query on SqlApp">
+      <option name="closed" value="true" />
+      <created>1709717711819</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709717711820</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Changed test location&#10;Added some static strings to stop human error">
+      <option name="closed" value="true" />
+      <created>1709718778482</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1709718778482</updated>
+    </task>
+    <task id="LOCAL-00033" summary="database connection debugging changes">
+      <option name="closed" value="true" />
+      <created>1709723953591</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709723953592</updated>
+    </task>
+    <task id="LOCAL-00034" summary="more database connection debugging changes">
+      <option name="closed" value="true" />
+      <created>1709725156541</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709725156541</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary">
+      <option name="closed" value="true" />
+      <created>1709727675138</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709727675138</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added AppTest.java">
+      <option name="closed" value="true" />
+      <created>1709728416057</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709728416057</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added AppTest.java">
+      <option name="closed" value="true" />
+      <created>1709729761947</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1709729761947</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added Code Coverage Badge">
+      <option name="closed" value="true" />
+      <created>1709731006103</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1709731006103</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added Some basic unit test to increase codecov score">
+      <option name="closed" value="true" />
+      <created>1710237320191</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237320191</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Removed 1 test that was breaking app">
+      <option name="closed" value="true" />
+      <created>1710237669209</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237669209</updated>
+    </task>
+    <task id="LOCAL-00041" summary="diabled system out test as was not working properly">
+      <option name="closed" value="true" />
+      <created>1710238058146</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1710238058146</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added more unit test &#10;App&#10;Area">
+      <option name="closed" value="true" />
+      <created>1710238797099</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710238797099</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity">
+      <option name="closed" value="true" />
+      <created>1710239594711</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710239594711</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added more unit test &#10;&#10;slight change to testGetCity">
+      <option name="closed" value="true" />
+      <created>1710240367461</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1710240367461</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added more unit test &#10;&#10;slight change to testGetCity">
+      <option name="closed" value="true" />
+      <created>1710241841814</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1710241841814</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added a tostring test to country">
+      <option name="closed" value="true" />
+      <created>1710247128713</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1710247128713</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Country Language Test Commit">
+      <option name="closed" value="true" />
+      <created>1710253369710</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1710253369710</updated>
+    </task>
+    <task id="LOCAL-00048" summary="City Test Commit">
+      <option name="closed" value="true" />
+      <created>1710254254256</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1710254254256</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,25 +697,43 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing" />
-    <MESSAGE value="app.java commit" />
-    <MESSAGE value="Updated .gitignore &#10;Added a License file" />
-    <MESSAGE value="Updated README with badges &#10;renamed License file" />
-    <MESSAGE value="Fixed Badges" />
-    <MESSAGE value="Created a Use Case for HR for the world by population size" />
-    <MESSAGE value="Created a Use Case for HR for the continent by population size" />
-    <MESSAGE value="Created a Use Case for HR for the cities by population size" />
-    <MESSAGE value="Created a Use Case for HR for the countries by population size" />
-    <MESSAGE value="Created user folder&#10;created user stories &#10;created user diagrams" />
-    <MESSAGE value="refractored user stories to MD file" />
-    <MESSAGE value="created the population" />
-    <MESSAGE value="updated the use cases and diagrams" />
-    <MESSAGE value="Updated README.md with names a development build" />
-    <MESSAGE value="Updated README.md with repo links" />
-    <MESSAGE value="Updated pom.xml with mongodb dependencies" />
-    <MESSAGE value="Added a new MongoApp class and created a db connection code" />
-    <MESSAGE value="Version 0.1.0.3&#10;Updated README for other branches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.0.3&#10;Updated README for other branches" />
+    <MESSAGE value="&#10;Updated README for other branches" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
+    <MESSAGE value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
+    <MESSAGE value="minor changes" />
+    <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
+    <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
+    <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File" />
+    <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File&#10;Changed Disconnects logic" />
+    <MESSAGE value="Fixed DB connection&#10;Fixed Query 8&#10;Fixed SQL query on SqlApp" />
+    <MESSAGE value="Changed test location&#10;Added some static strings to stop human error" />
+    <MESSAGE value="database connection debugging changes" />
+    <MESSAGE value="more database connection debugging changes" />
+    <MESSAGE value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
+    <MESSAGE value="Added AppTest.java" />
+    <MESSAGE value="Added Code Coverage Badge" />
+    <MESSAGE value="Added Some basic unit test to increase codecov score" />
+    <MESSAGE value="Removed 1 test that was breaking app" />
+    <MESSAGE value="diabled system out test as was not working properly" />
+    <MESSAGE value="Added more unit test &#10;App&#10;Area" />
+    <MESSAGE value="Added more unit test &#10;&#10;testAreaEnum&#10;testGetCity" />
+    <MESSAGE value="Added more unit test &#10;&#10;slight change to testGetCity" />
+    <MESSAGE value="Added a tostring test to country" />
+    <MESSAGE value="Country Language Test Commit" />
+    <MESSAGE value="City Test Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="City Test Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/napier/sem/City.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

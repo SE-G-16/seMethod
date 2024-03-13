@@ -1,5 +1,7 @@
 package com.napier.sem;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,6 +21,34 @@ public class App {
 
     public static String LocationDBStr = "db:3306";
     public static String LocationLocalhostStr = "localhost:3306";
+
+
+    // a custom print method with a string return for testing System.out.print
+    // this was to improve code coverage
+    public static StringBuilder Print(String _args)
+    {
+        StringBuilder _string = new StringBuilder();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        PrintStream old = System.out;
+
+        System.setOut(ps);
+
+        if(_args != null)
+        {
+            _string = new StringBuilder(String.valueOf(_args));
+
+            System.out.print(_string);
+            System.out.flush();
+            System.setOut(old);
+
+            System.out.println(baos.toString());
+            return new StringBuilder(baos.toString());
+        }
+
+        return _string;
+    }
+
 
     public void connect(String location, int delay) throws UnknownHostException {
 
@@ -63,6 +93,7 @@ public class App {
     {
         // attempting to disconnect
         System.out.println("Attempting to disconnect from database...");
+
         if (con != null)
         {
             try
@@ -79,13 +110,16 @@ public class App {
     }
 
 
+
+
     // main entry point
 
     public static void main(String[] args) throws UnknownHostException {
         // Create new Application and connect to database
         a = new App();
 
-        System.out.println("Args length: " + args.length + " /args/ " + Arrays.toString(args));
+        App.Print("Args length: " + args.length + " /args/ " + Arrays.toString(args));
+        //System.out.println("Args length: " + args.length + " /args/ " + Arrays.toString(args));
         /*if(args.length < 1){
             // localhost:3306
             a.connect(LocationLocalhostStr, 0);

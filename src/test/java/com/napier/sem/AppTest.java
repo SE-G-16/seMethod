@@ -3,6 +3,12 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import javax.sound.midi.SysexMessage;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 import java.net.UnknownHostException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -71,6 +77,19 @@ class AppTest {
         {
             System.out.println("\nAPP TEST: " + country.code + " / " + country.name + " / " + country.continent);
         }
+    }
+
+    @Test
+    public void testPrint() throws IOException {
+
+        String aaa = String.valueOf(App.Print("hello print method" + " cat"));
+        String bbb = String.valueOf(App.Print( ""));
+        String ccc = String.valueOf(App.Print("44433"));
+
+        assertEquals("hello print method cat", aaa);
+        assertEquals("", bbb);
+        assertEquals("44433", ccc);
+
     }
 
 }

@@ -26,11 +26,11 @@ public class SqlApp
 {
     //<editor-fold desc="connections methods>"
 
-    /**
 
     /**
      * Connect to the MySQL database.
      */
+
     /*public void connect()  {
 
 
@@ -77,7 +77,7 @@ public class SqlApp
     /**
      * Disconnect from the MySQL database.
      */
-    public void disconnect()
+    /*public void disconnect()
     {
         // attempting to disconnect
         System.out.println("Attempting to disconnect to database...");
@@ -94,6 +94,8 @@ public class SqlApp
             }
         }
     }
+    */
+
 
     //</editor-fold>
 
@@ -137,8 +139,10 @@ public class SqlApp
         }
     }
 
-    public void displayCity(City _city)
+    public String displayCity(City _city)
     {
+        StringBuilder stb = new StringBuilder();
+
         if (_city != null)
         {
             System.out.println(
@@ -149,7 +153,16 @@ public class SqlApp
                             "Pop: " + _city.population + "\n"
 
                             );
+
+            stb.append("ID: ").append(_city.id).append("\n");
+            stb.append("Name: ").append(_city.name).append("\n");
+            stb.append("Code: ").append(_city.country_code).append("\n");
+            stb.append("District: ").append(_city.district).append("\n");
+            stb.append("Pop: ").append(_city.population).append("\n");
+
+            return stb.toString();
         }
+        return stb.toString();
     }
 
     //</editor-fold>
@@ -366,6 +379,13 @@ public class SqlApp
     }
 
 
+    /**
+     * @param _qtype
+     * @param _area
+     * @param areaStr
+     * @param topAmt
+     * @return
+     */
     // Qtype = Country,City, CapitalCities
     // Area = World, Continent, Region, Country, District
     // areaStr = "Europe, Germany, etc"
@@ -552,6 +572,10 @@ public class SqlApp
         }
     } // end of GetQTypeByPopSize
 
+    /**
+     * @param _area
+     * @param _areaStr
+     */
     public void GetPopInVOutCity(Area _area, String _areaStr)
     {
         Integer cityTotal = 0;

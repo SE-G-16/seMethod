@@ -3,12 +3,7 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import javax.sound.midi.SysexMessage;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.SQLException;
-import java.util.Scanner;
 
 import java.net.UnknownHostException;
 
@@ -79,9 +74,9 @@ class AppTest {
 
     @Test
     void print() {
-        String aaa = String.valueOf(App.Print("hello print method" + " cat"));
-        String bbb = String.valueOf(App.Print( ""));
-        String ccc = String.valueOf(App.Print("44433"));
+        String aaa = String.valueOf(App.print("hello print method" + " cat"));
+        String bbb = String.valueOf(App.print( ""));
+        String ccc = String.valueOf(App.print("44433"));
 
         assertEquals("hello print method cat", aaa);
         assertEquals("", bbb);

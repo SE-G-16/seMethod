@@ -39,11 +39,7 @@ class SqlAppTest {
 
     @BeforeAll
     static void init() throws UnknownHostException {
-
-
         App.connect(App.LocationLocalhostStr, 3000);
-
-
     }
 
     @Test
@@ -129,9 +125,67 @@ class SqlAppTest {
         }
     }
 
+
     @Test
-    void testDisplayObject()
-    {
+    void getCity() {
+
+        if(App.con == null)
+        {
+            return;
+        }
+
+        City city = App.s.getCity(1106);
+        assertEquals(1106, city.id);
+        assertEquals("New Bombay", city.name);
+        assertEquals("IND", city.country_code);
+        assertEquals(307297, city.population);
+        assertEquals("Maharashtra", city.district);
+
+    }
+
+    @Test
+    void displayCity() {
+
+        if(App.con == null)
+        {
+            return;
+        }
+
+        City city = App.s.getCity(1106);
+
+        String result = s.displayCity(city);
+
+        assertEquals("ID: 1106\nName: New Bombay\nCode: IND\nDistrict: Maharashtra\nPop: 307297\n", result);
+
+    }
+
+    @Test
+    void getCountry() {
+
+    }
+
+    @Test
+    void displayCountry() {
+
+    }
+
+    @Test
+    void getCountryOfficialLanguage() {
+
+    }
+
+    @Test
+    void getCountryLanguage() {
+
+    }
+
+    @Test
+    void displayCountryLanguage() {
+
+    }
+
+    @Test
+    void displayObjects() {
         ArrayList<Object> newList = new ArrayList<>();
 
         Object cat = new Dummy("Felix");
@@ -148,7 +202,14 @@ class SqlAppTest {
 
         assertEquals("\nsize of list: 3\n\nFelix\nSnoopy\nDolly\n\n----------------------------------------------\n", gh);
 
+    }
 
+    @Test
+    void getQTypeByPopSize() {
+    }
+
+    @Test
+    void getPopInVOutCity() {
     }
 
 

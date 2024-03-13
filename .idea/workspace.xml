@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added testGetCountryLanaguag&#10;Added GetCountryLanguage method">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more test coverage to app.test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/CityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +99,7 @@
     "JUnit.AppTest.testSystemOut.executor": "Run",
     "JUnit.CityTest.executor": "Run",
     "JUnit.CityTest.testGetCity.executor": "Run",
+    "JUnit.CountryLanguageTest.executor": "Run",
     "JUnit.CountryLanguageTest.testGetCountryLanguage.executor": "Run",
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
@@ -152,7 +155,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.main">
+  <component name="RunManager" selected="JUnit.CountryLanguageTest">
     <configuration name="AppTest.connect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -217,7 +220,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SqlAppTest.testDisplayObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountryLanguageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -226,9 +229,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
-      <option name="METHOD_NAME" value="testDisplayObject" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryLanguageTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountryLanguageTest" />
         <item itemvalue="JUnit.AppTest.main" />
         <item itemvalue="JUnit.AppTest.connect" />
         <item itemvalue="JUnit.AppTest.disconnect" />
         <item itemvalue="JUnit.AppTest.print" />
-        <item itemvalue="JUnit.SqlAppTest.testDisplayObject" />
       </list>
     </recent_temporary>
   </component>
@@ -302,14 +304,6 @@
       <workItem from="1709810343996" duration="5949000" />
       <workItem from="1710241413861" duration="1266000" />
       <workItem from="1710332773256" duration="2868000" />
-    </task>
-    <task id="LOCAL-00001" summary="testing">
-      <option name="closed" value="true" />
-      <created>1707319534587</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1707319534587</updated>
     </task>
     <task id="LOCAL-00002" summary="testing">
       <option name="closed" value="true" />
@@ -695,7 +689,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710328187319</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added more test coverage to app.test">
+      <option name="closed" value="true" />
+      <created>1710337568186</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1710337568186</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +716,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update README.md" />
     <MESSAGE value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
     <MESSAGE value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
     <MESSAGE value="minor changes" />
@@ -739,7 +740,8 @@
     <MESSAGE value="Country Language Test Commit" />
     <MESSAGE value="City Test Commit" />
     <MESSAGE value="Added testGetCountryLanaguag&#10;Added GetCountryLanguage method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added testGetCountryLanaguag&#10;Added GetCountryLanguage method" />
+    <MESSAGE value="Added more test coverage to app.test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more test coverage to app.test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

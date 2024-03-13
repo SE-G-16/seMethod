@@ -1,23 +1,30 @@
 package com.napier.sem;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.net.UnknownHostException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CountryLanguageTest {
 
-    private SqlApp sqlApp;
-
-    @BeforeEach
-    public void setUp() {
-        sqlApp = new SqlApp();
-        // Initialize any required resources or mocks here
+    @BeforeAll
+    static void init() throws UnknownHostException {
+        App.connect(App.LocationLocalhostStr, 3000);
     }
 
     @Test
     public void testGetCity() {
+
+        if(App.con == null)
+        {
+            return;
+        }
+
         // Test getCity method with a known city ID
-        City city = sqlApp.getCity(3793);
+        City city = App.s.getCity(3793);
 
         if(city != null) {
             assertEquals("City: New York 8008278", App.s.getCity(city.id).toString());
@@ -29,8 +36,14 @@ public class CountryLanguageTest {
 
     @Test
     public void testGetCountry() {
+
+        if(App.con == null)
+        {
+            return;
+        }
+
         // Test getCountry method with a known country code
-        Country country = sqlApp.getCountry("USA");
+        Country country = App.s.getCountry("USA");
 
         if(country != null) {
             assertEquals("United States", country.name);
@@ -44,8 +57,14 @@ public class CountryLanguageTest {
 
     @Test
     public void testGetCountryOfficialLanguage() {
+
+        if(App.con == null)
+        {
+            return;
+        }
+
         // Test getCountryOfficialLanguage method with a known country code
-        CountryLanguage language = sqlApp.getCountryOfficialLanguage("USA");
+        CountryLanguage language = App.s.getCountryOfficialLanguage("USA");
 
         if(language != null)
         {
@@ -59,7 +78,12 @@ public class CountryLanguageTest {
     @Test
     public void testGetCountryLanguage()
     {
-        CountryLanguage cl = sqlApp.getCountryLanguage("GBR");
+        if(App.con == null)
+        {
+            return;
+        }
+
+        CountryLanguage cl = App.s.getCountryLanguage("GBR");
 
         if(cl != null)
         {

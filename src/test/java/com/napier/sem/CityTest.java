@@ -8,19 +8,19 @@ import java.net.UnknownHostException;
 import static org.junit.jupiter.api.Assertions.*;
 class CityTest {
 
-    //City cty = new City();
-    //city.name = "Scotland";
-
-    static App app = new App();
-
     @BeforeAll
     static void init() throws UnknownHostException {
-        app.connect(App.LocationLocalhostStr, 3000);
+        App.connect(App.LocationLocalhostStr, 3000);
     }
 
     @Test
     void testGetCity()
     {
+        if(App.con == null)
+        {
+            return;
+        }
+
         City city = App.s.getCity(3602);
 
         if(city != null)

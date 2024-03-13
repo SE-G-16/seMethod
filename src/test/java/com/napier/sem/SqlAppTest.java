@@ -33,15 +33,15 @@ class Dummy
 class SqlAppTest {
 
 
-    static App app;
+
     static SqlApp s;
 
 
     @BeforeAll
     static void init() throws UnknownHostException {
 
-        app = new App();
-        app.connect(App.LocationLocalhostStr, 3000);
+
+        App.connect(App.LocationLocalhostStr, 3000);
 
 
     }
@@ -67,7 +67,7 @@ class SqlAppTest {
 
         City city = s.getCity(455);
 
-        if(city != null && app != null)
+        if(city != null && App.con != null)
         {
             s.displayCity(city);
 

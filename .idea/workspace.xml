@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more test coverage for display country and get country, plus other fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,14 +305,7 @@
       <workItem from="1710241413861" duration="1266000" />
       <workItem from="1710332773256" duration="2868000" />
       <workItem from="1710347705299" duration="18000" />
-    </task>
-    <task id="LOCAL-00003" summary="app.java commit">
-      <option name="closed" value="true" />
-      <created>1707398825197</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1707398825197</updated>
+      <workItem from="1710347755436" duration="1030000" />
     </task>
     <task id="LOCAL-00004" summary="Updated .gitignore &#10;Added a License file">
       <option name="closed" value="true" />
@@ -701,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710345033529</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Added more test coverage for display country and get country, plus other fixes">
+      <option name="closed" value="true" />
+      <created>1710347992983</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347992985</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

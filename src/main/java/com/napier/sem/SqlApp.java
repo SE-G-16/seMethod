@@ -1,11 +1,7 @@
 package com.napier.sem;
 
-import java.net.UnknownHostException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
-
-import static java.net.InetAddress.getLocalHost;
 
 enum QType {
     Country,
@@ -340,17 +336,24 @@ public class SqlApp
     ///////////////////////////////////////////////////////////////////////////////////////
 
     // multi use display using tostring
-    public void displayObjects(ArrayList<Object> objList) {
+    public StringBuilder displayObjects(ArrayList<Object> objList) {
+
+        StringBuilder outPut = new StringBuilder();
 
         if(objList != null || objList.isEmpty())
         {
+            outPut.append("\nsize of list: " + objList.size() + "\n\n");
             System.out.println("\nsize of list: " + objList.size() + "\n");
 
             for (Object i : objList) {
+                outPut.append(i.toString() + "\n");
                 System.out.println(i.toString());
             }
 
+            outPut.append("\n----------------------------------------------\n");
             System.out.println("\n----------------------------------------------\n");
+
+            return outPut;
 
         }
         else
@@ -359,6 +362,7 @@ public class SqlApp
         }
 
 
+        return outPut;
     }
 
 

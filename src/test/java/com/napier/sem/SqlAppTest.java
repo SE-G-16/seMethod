@@ -7,8 +7,28 @@ import java.sql.Statement;
 
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+// class for test purposes
+class Dummy
+{
+    public String name;
+
+    // constructor
+    Dummy(String _name)
+    {
+        name = _name;
+
+    }
+
+    @Override
+    public String toString() {
+        return name.toString();
+    }
+}
+
 
 class SqlAppTest {
 
@@ -107,10 +127,29 @@ class SqlAppTest {
             System.out.println("Failed to get country language details");
 
         }
+    }
 
+    @Test
+    void testDisplayObject()
+    {
+        ArrayList<Object> newList = new ArrayList<>();
 
+        Object cat = new Dummy("Felix");
+        Object dog = new Dummy("Snoopy");
+        Object sheep = new Dummy("Dolly");
+
+        newList.add(cat.toString());
+        newList.add(dog.toString());
+        newList.add(sheep.toString());
+
+        String gh = String.valueOf(App.s.displayObjects(newList));
+
+        //App.Print(gh);
+
+        assertEquals("\nsize of list: 3\n\nFelix\nSnoopy\nDolly\n\n----------------------------------------------\n", gh);
 
 
     }
+
 
 }

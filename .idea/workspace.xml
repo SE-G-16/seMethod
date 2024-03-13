@@ -7,7 +7,8 @@
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added testGetCountryLanaguag&#10;Added GetCountryLanguage method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +101,7 @@
     "JUnit.SqlAppTest.executor": "Run",
     "JUnit.SqlAppTest.sqlQuerytest.executor": "Run",
     "JUnit.SqlAppTest.testAreaEnum.executor": "Run",
+    "JUnit.SqlAppTest.testDisplayObject.executor": "Run",
     "JUnit.SqlAppTest.testGetCity.executor": "Run",
     "JUnit.SqlAppTest.testSystemOut.executor": "Run",
     "Maven.seMethods [compile].executor": "Run",
@@ -147,7 +149,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.SqlAppTest.testDisplayObject">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -193,22 +195,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountryTest.testGetString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryTest" />
-      <option name="METHOD_NAME" value="testGetString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SqlAppTest.sqlQuerytest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -220,6 +206,22 @@
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
       <option name="METHOD_NAME" value="sqlQuerytest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlAppTest.testDisplayObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="testDisplayObject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -245,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SqlAppTest.testDisplayObject" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.AppTest.testPrint" />
         <item itemvalue="JUnit.CountryLanguageTest.testGetCountryLanguage" />
         <item itemvalue="JUnit.SqlAppTest.sqlQuerytest" />
-        <item itemvalue="JUnit.CountryTest.testGetString" />
       </list>
     </recent_temporary>
   </component>
@@ -293,6 +295,7 @@
       <workItem from="1709808469866" duration="1071000" />
       <workItem from="1709810343996" duration="5949000" />
       <workItem from="1710241413861" duration="1266000" />
+      <workItem from="1710332773256" duration="2868000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <option name="closed" value="true" />

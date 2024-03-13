@@ -118,7 +118,7 @@ public class App {
         // Create new Application and connect to database
         a = new App();
 
-        App.Print("Args length: " + args.length + " /args/ " + Arrays.toString(args));
+        App.Print(String.valueOf("Args length: " + args.length + " /args/ " + Arrays.toString(args)));
         //System.out.println("Args length: " + args.length + " /args/ " + Arrays.toString(args));
         /*if(args.length < 1){
             // localhost:3306
@@ -197,7 +197,7 @@ public class App {
         // get all cities in a specific continent by size Query 22
         ArrayList<Object> Query22 = s.GetQTypeByPopSize(QType.CapitalCities, Area.Region, "South America", 25);
 
-
+        App.Print("\n");
 
         //examples
         // get all capitals in a specific continent by size Query 10
@@ -211,107 +211,109 @@ public class App {
 
 
 
-        System.out.println("\n\n(Query 1 - Country, World, LIMIT 300 ) Countries by Pop desc");
+        //System.out.println("\n\n(Query 1 - Country, World, LIMIT 300 ) Countries by Pop desc");
+
+        App.Print("\n\n(Query 1 - Country, World, LIMIT 300 ) Countries by Pop desc");
         s.displayObjects(allCountries);
 
-        System.out.println("\n\n(Query2 - Country, Continent, Europe, LIMIT 20 ) Countries by Pop in a specific desc");
+        App.Print("\n\n(Query2 - Country, Continent, Europe, LIMIT 20 ) Countries by Pop in a specific desc");
         s.displayObjects(allCountriesInContinent);
 
-        System.out.println("\n\n(Query3 - Country, Region, Western Europe, LIMIT 10 ) Countries by Pop in a specific desc");
+        App.Print("\n\n(Query3 - Country, Region, Western Europe, LIMIT 10 ) Countries by Pop in a specific desc");
         s.displayObjects(allCountriesInRegion);
 
-        System.out.println("\n\n(Query 4 - Country, World, LIMIT 15 ) Countries in the world by N");
+        App.Print("\n\n(Query 4 - Country, World, LIMIT 15 ) Countries in the world by N");
         s.displayObjects(Query4);
 
-        System.out.println("\n\n(Query 5 - Country, Continent, Asia, LIMIT 25 ) Countries in continent by N");
+        App.Print("\n\n(Query 5 - Country, Continent, Asia, LIMIT 25 ) Countries in continent by N");
         s.displayObjects(Query5);
 
-        System.out.println("\n\n(Query 6 - Country, Region, Western Europe, LIMIT 5) Countries in region by N");
+        App.Print("\n\n(Query 6 - Country, Region, Western Europe, LIMIT 5) Countries in region by N");
         s.displayObjects(Query6);
 
-        System.out.println("\n\n(Query 7 - City, World, LIMIT 100 ) Cities in the world organised by largest population to smallest");
+        App.Print("\n\n(Query 7 - City, World, LIMIT 100 ) Cities in the world organised by largest population to smallest");
         s.displayObjects(Query7);
 
-        System.out.println("\n\n(Query8 - City, Continent, Europe, LIMIT 25) Cities by Pop desc");
+        App.Print("\n\n(Query8 - City, Continent, Europe, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query8);
 
-        System.out.println("\n\n(Query9 - City, Region, Western Europe, LIMIT 25) Cities by Pop desc");
+        App.Print("\n\n(Query9 - City, Region, Western Europe, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query9);
 
-        System.out.println("\n\n(Query10 - City, Country, Japan, LIMIT 25) Cities by Pop desc");
+        App.Print("\n\n(Query10 - City, Country, Japan, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query10);
 
-        System.out.println("\n\n(Query11 - City, Country, Yunnan, LIMIT 25) Cities by Pop desc");
+        App.Print("\n\n(Query11 - City, Country, Yunnan, LIMIT 25) Cities by Pop desc");
         s.displayObjects(Query11);
 
-        System.out.println("\n\n(Query 12 - City, World, LIMIT 25 ) Cities in the world by N");
+        App.Print("\n\n(Query 12 - City, World, LIMIT 25 ) Cities in the world by N");
         s.displayObjects(Query12);
 
-        System.out.println("\n\n(Query 13 - City, Continent, LIMIT 25 ) Cities in the world by N");
+        App.Print("\n\n(Query 13 - City, Continent, LIMIT 25 ) Cities in the world by N");
         s.displayObjects(Query13);
 
-        System.out.println("\n\n(Query 14 - City, Region, LIMIT 25 ) Cities in the world by N");
+        App.Print("\n\n(Query 14 - City, Region, LIMIT 25 ) Cities in the world by N");
         s.displayObjects(Query14);
 
-        System.out.println("\n\n(Query 15 - City, Country, LIMIT 25 ) Cities in the world by N");
+        App.Print("\n\n(Query 15 - City, Country, LIMIT 25 ) Cities in the world by N");
         s.displayObjects(Query15);
 
 
-        System.out.println("\n\n(Query 16- City, District, LIMIT 25 ) Cities in the world by N");
+        App.Print("\n\n(Query 16- City, District, LIMIT 25 ) Cities in the world by N");
         s.displayObjects(Query16);
 
-        System.out.println("\n\n(Query 17 - CapitalCities , World, LIMIT 100 ) Capital Cities in the world organised by largest population to smallest");
+        App.Print("\n\n(Query 17 - CapitalCities , World, LIMIT 100 ) Capital Cities in the world organised by largest population to smallest");
         s.displayObjects(Query17);
 
-        System.out.println("\n\n(Query 18- CapitalCities, Continent , LIMIT 100 ) Capital Cities in the  Continent organised by largest population to smallest");
+        App.Print("\n\n(Query 18- CapitalCities, Continent , LIMIT 100 ) Capital Cities in the  Continent organised by largest population to smallest");
         s.displayObjects(Query18);
 
-        System.out.println("\n\n(Query 19 - CapitalCities, Region, LIMIT 100 ) Capital Cities in the Region organised by largest population to smallest");
+        App.Print("\n\n(Query 19 - CapitalCities, Region, LIMIT 100 ) Capital Cities in the Region organised by largest population to smallest");
         s.displayObjects(Query19);
 
-        System.out.println("\n\n(Query 20 - CapitalCities, World, LIMIT 25 ) CapitalCities in the world by N");
+        App.Print("\n\n(Query 20 - CapitalCities, World, LIMIT 25 ) CapitalCities in the world by N");
         s.displayObjects(Query20);
 
-        System.out.println("\n\n(Query 21 - CapitalCities, Continent, LIMIT 25 ) CapitalCities in the Continent by N");
+        App.Print("\n\n(Query 21 - CapitalCities, Continent, LIMIT 25 ) CapitalCities in the Continent by N");
         s.displayObjects(Query21);
 
-        System.out.println("\n\n(Query 22 - CapitalCities, Region, LIMIT 25 ) CapitalCities in the Region by N");
+        App.Print("\n\n(Query 22 - CapitalCities, Region, LIMIT 25 ) CapitalCities in the Region by N");
         s.displayObjects(Query22);
 
-        System.out.println("\n\n(Query 23 - Population Sizes, Continent,) population of people, people living in cities, and people not living in cities in each Continent");
+        App.Print("\n\n(Query 23 - Population Sizes, Continent,) population of people, people living in cities, and people not living in cities in each Continent");
         s.GetPopInVOutCity(Area.Continent , "Africa");
 
-        System.out.println("\n\n(Query 24 - Population Sizes, Region, ) population of people, people living in cities, and people not living in cities in each Region");
+        App.Print("\n\n(Query 24 - Population Sizes, Region, ) population of people, people living in cities, and people not living in cities in each Region");
         s.GetPopInVOutCity(Area.Region , "Southern Africa");
 
-        System.out.println("\n\n(Query 25 - Population Sizes, Country,) population of people, people living in cities, and people not living in cities in each Country");
+        App.Print("\n\n(Query 25 - Population Sizes, Country,) population of people, people living in cities, and people not living in cities in each Country");
         s.GetPopInVOutCity(Area.Country , "France");
 
         // overall population reports
-        System.out.println("\n Overall Population \n");
+        App.Print("\n Overall Population \n");
         // get population method not created yet
         // display population
 
         // overall langaugaes reports
-        System.out.println("\n Languages Report: \n");
+        App.Print("\n Languages Report: \n");
         // get langauges method not created yet
         // display langauges
 
 
         // country report
-        System.out.println("\n Country Report:\n");
+        App.Print("\n Country Report:\n");
         Country australia = s.getCountry("AUS");
         s.displayCountry(australia);
 
 
         // city report
-        System.out.println("\n City Report:\n");
+        App.Print("\n City Report:\n");
         City kabul = s.getCity(1);
         s.displayCity(kabul);
 
 
         // capital report
-        System.out.println("\n Capital Report:\n");
+        App.Print("\n Capital Report:\n");
         City Delhi = s.getCity(1109);
         s.displayCity(Delhi);
 

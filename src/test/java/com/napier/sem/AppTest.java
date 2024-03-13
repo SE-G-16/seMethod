@@ -107,7 +107,7 @@ class AppTest {
     }
 
     @Test
-    void main() throws UnknownHostException, SQLException {
+    public void main() throws UnknownHostException, SQLException {
 
         if(App.con == null)
         {
@@ -126,9 +126,6 @@ class AppTest {
         {
             assertTrue(App.con.isClosed());
         }
-
-
-
 
     }
 }

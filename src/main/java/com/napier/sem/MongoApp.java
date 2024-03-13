@@ -10,7 +10,7 @@ public class MongoApp {
     public static void main(String[] args) {
 
         // Connect to MongoDB on local system - we're using port 27000
-        try {
+        /*try {
             MongoClient mongoClient = new MongoClient("localhost");
 
             // Get a database - will create when we use it
@@ -38,7 +38,7 @@ public class MongoApp {
         catch(Exception ex)
         {
             System.out.println("Connection error: " + ex);
-        }
+        }*/
 
 
 

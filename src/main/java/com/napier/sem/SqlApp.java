@@ -223,8 +223,10 @@ public class SqlApp
     }
 
     // a method for displaying the country
-    public void displayCountry(Country _country)
+    public String displayCountry(Country _country)
     {
+        StringBuilder stb = new StringBuilder();
+
         if (_country != null)
         {
             System.out.println(
@@ -237,14 +239,36 @@ public class SqlApp
                             "Population: " + _country.population + "\n" +
                             "Life Expectancy: " + _country.life_expectancy + "\n" +
                             "Gross Nation Product: " + _country.gnp + "\n" +
-                            "Local Name : " + _country.local_name + "\n" +
+                            "Old Gross Nation Product: " + _country.old_gnp + "\n" +
+                            "Local Name: " + _country.local_name + "\n" +
                             "Government Type: " + _country.government_type + "\n" +
                             "Head of State: " + _country.head_of_state + "\n" +
                             "Capital: " + _country.capital + "\n" +
-                            "Code 2:" + _country.code_two + "\n"
+                            "Code 2: " + _country.code_two + "\n"
 
             );
+
+            stb.append("Code: ").append(_country.code).append("\n");
+            stb.append("Name: ").append(_country.name).append("\n");
+            stb.append("Continent: ").append(_country.continent).append("\n");
+            stb.append("Region: ").append(_country.region).append("\n");
+            stb.append("Surface Area: ").append(_country.surface_area).append("\n");
+            stb.append("Independence Year: ").append(_country.independence_year).append("\n");
+            stb.append("Population: ").append(_country.population).append("\n");
+            stb.append("Life Expectancy: ").append(_country.life_expectancy).append("\n");
+            stb.append("Gross Nation Product: ").append(_country.gnp).append("\n");
+            stb.append("Old Gross Nation Product: ").append(_country.old_gnp).append("\n");
+            stb.append("Local Name: ").append(_country.local_name).append("\n");
+            stb.append("Government Type: ").append(_country.government_type).append("\n");
+            stb.append("Head of State: ").append(_country.head_of_state).append("\n");
+            stb.append("Capital: ").append(_country.capital).append("\n");
+            stb.append("Code 2: ").append(_country.code_two).append("\n");
+
+
+            return stb.toString();
         }
+
+        return stb.toString();
     }
     //</editor-fold>
 
@@ -328,6 +352,9 @@ public class SqlApp
         }
     }
 
+    /**
+     * @param _language
+     */
     // a method for displaying the country language
     public void displayCountryLanguage(CountryLanguage _language)
     {

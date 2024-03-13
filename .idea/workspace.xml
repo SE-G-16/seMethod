@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more test coverage to app.test">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more test coverage for display country and get country, plus other fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/MongoApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
@@ -33,7 +33,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,76 +73,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.App.executor": "Run",
-    "Application.MongoApp.executor": "Run",
-    "Application.SqlApp.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Use Case",
-    "Docker.Docker Image.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.db/Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.AppTest.connect.executor": "Run",
-    "JUnit.AppTest.disconnect.executor": "Run",
-    "JUnit.AppTest.executor": "Run",
-    "JUnit.AppTest.main.executor": "Run",
-    "JUnit.AppTest.print.executor": "Run",
-    "JUnit.AppTest.testGetCountry.executor": "Run",
-    "JUnit.AppTest.testPrint.executor": "Run",
-    "JUnit.AppTest.testQtypeEnum.executor": "Run",
-    "JUnit.AppTest.testSqlApp.executor": "Run",
-    "JUnit.AppTest.testSystemOut.executor": "Run",
-    "JUnit.CityTest.executor": "Run",
-    "JUnit.CityTest.testGetCity.executor": "Run",
-    "JUnit.CountryLanguageTest.executor": "Run",
-    "JUnit.CountryLanguageTest.testGetCountryLanguage.executor": "Run",
-    "JUnit.CountryTest.executor": "Run",
-    "JUnit.CountryTest.testGetCountry.executor": "Run",
-    "JUnit.CountryTest.testGetString.executor": "Run",
-    "JUnit.SqlAppTest.displayCity.executor": "Debug",
-    "JUnit.SqlAppTest.executor": "Run",
-    "JUnit.SqlAppTest.getCity.executor": "Run",
-    "JUnit.SqlAppTest.sqlQuerytest.executor": "Run",
-    "JUnit.SqlAppTest.testAreaEnum.executor": "Run",
-    "JUnit.SqlAppTest.testDisplayObject.executor": "Run",
-    "JUnit.SqlAppTest.testGetCity.executor": "Run",
-    "JUnit.SqlAppTest.testSystemOut.executor": "Run",
-    "Maven.seMethods [compile].executor": "Run",
-    "Maven.seMethods [package].executor": "Run",
-    "Maven.seMethods [test].executor": "Run",
-    "Maven.seMethods [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anany/seMethod/use-cases",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "two.files.diff.last.used.file": "C:/Users/anany/seMethod/use-cases/6.Top populated capital cities.puml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MongoApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SqlApp.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Use Case&quot;,
+    &quot;Docker.Docker Image.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.db/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.connect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.disconnect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.print.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testGetCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testPrint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testQtypeEnum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testSqlApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testSystemOut.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CityTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CityTest.testGetCity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CountryLanguageTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CountryLanguageTest.testGetCountryLanguage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CountryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CountryTest.testGetCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CountryTest.testGetString.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.displayCity.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SqlAppTest.displayCountry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.getCity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.sqlQuerytest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.testAreaEnum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.testDisplayObject.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.testGetCity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SqlAppTest.testSystemOut.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.seMethods [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.seMethods [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.seMethods [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.seMethods [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anany/seMethod/use-cases&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/anany/seMethod/use-cases/6.Top populated capital cities.puml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\anany\seMethod\use-cases" />
@@ -157,23 +158,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SqlAppTest.displayCity">
-    <configuration name="AppTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SqlAppTest.displayCountry">
     <configuration name="AppTest.print" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -221,6 +206,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SqlAppTest.displayCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
+      <option name="METHOD_NAME" value="displayCountry" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SqlAppTest.getCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -257,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SqlAppTest.displayCountry" />
         <item itemvalue="JUnit.SqlAppTest.displayCity" />
         <item itemvalue="JUnit.SqlAppTest.getCity" />
         <item itemvalue="JUnit.CountryLanguageTest" />
         <item itemvalue="JUnit.AppTest.print" />
-        <item itemvalue="JUnit.AppTest.main" />
       </list>
     </recent_temporary>
   </component>
@@ -306,14 +307,7 @@
       <workItem from="1709810343996" duration="5949000" />
       <workItem from="1710241413861" duration="1266000" />
       <workItem from="1710332773256" duration="2868000" />
-    </task>
-    <task id="LOCAL-00002" summary="testing">
-      <option name="closed" value="true" />
-      <created>1707319946550</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1707319946550</updated>
+      <workItem from="1710347705299" duration="18000" />
     </task>
     <task id="LOCAL-00003" summary="app.java commit">
       <option name="closed" value="true" />
@@ -699,7 +693,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710337568186</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="added workspace.xml">
+      <option name="closed" value="true" />
+      <created>1710345033529</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1710345033529</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,8 +720,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update README.md to have helpful run commands in troubleshooting&#10;&#10;changed the hostname" />
-    <MESSAGE value="Massive updates&#10;git modules created&#10;docker compose file setup&#10;database added file&#10;sql connection setup&#10;README.md changed&#10;pom file changed" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
     <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
@@ -743,7 +743,9 @@
     <MESSAGE value="City Test Commit" />
     <MESSAGE value="Added testGetCountryLanaguag&#10;Added GetCountryLanguage method" />
     <MESSAGE value="Added more test coverage to app.test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more test coverage to app.test" />
+    <MESSAGE value="added workspace.xml" />
+    <MESSAGE value="Added more test coverage for display country and get country, plus other fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more test coverage for display country and get country, plus other fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

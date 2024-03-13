@@ -50,7 +50,7 @@ public class App {
     }
 
 
-    public void connect(String location, int delay) throws UnknownHostException {
+    public static void connect(String location, int delay) throws UnknownHostException {
 
         System.out.println("HOSTNAME: " + getLocalHost(). getHostName());
 
@@ -89,6 +89,9 @@ public class App {
         }
     }
 
+    /**
+     * This method disconnect the database connection
+     */
     public static void disconnect()
     {
         // attempting to disconnect

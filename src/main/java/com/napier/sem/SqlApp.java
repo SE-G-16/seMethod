@@ -280,6 +280,45 @@ public class SqlApp
         }
     }
 
+    // get country language
+    public CountryLanguage getCountryLanguage(String _code)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT  countrycode, language, isofficial, percentage "
+                            + "FROM countrylanguage "
+                            //+ "WHERE code =  'CUB'";
+                            + "WHERE countrycode =  '" + _code + "'";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                CountryLanguage countryLanguage = new CountryLanguage();
+                countryLanguage.country_code = rset.getString("countrycode");
+                countryLanguage.language = rset.getString("language");
+                countryLanguage.is_official = rset.getString("isofficial");
+                countryLanguage.percentage = rset.getDouble("percentage");
+
+                return countryLanguage;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country language details");
+            return null;
+        }
+    }
+
     // a method for displaying the country language
     public void displayCountryLanguage(CountryLanguage _language)
     {

@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="City Test Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/CountryLanguageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,7 @@
     "JUnit.AppTest.testSystemOut.executor": "Run",
     "JUnit.CityTest.executor": "Run",
     "JUnit.CityTest.testGetCity.executor": "Run",
+    "JUnit.CountryLanguageTest.testGetCountryLanguage.executor": "Run",
     "JUnit.CountryTest.executor": "Run",
     "JUnit.CountryTest.testGetCountry.executor": "Run",
     "JUnit.CountryTest.testGetString.executor": "Run",
@@ -108,7 +110,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/anany/seMethod/use-cases",
@@ -144,8 +146,8 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SqlAppTest.sqlQuerytest">
-    <configuration name="AppTest.testSqlApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CountryLanguageTest.testGetCountryLanguage">
+    <configuration name="CountryLanguageTest.testGetCountryLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +156,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="testSqlApp" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.CountryLanguageTest" />
+      <option name="METHOD_NAME" value="testGetCountryLanguage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -245,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountryLanguageTest.testGetCountryLanguage" />
         <item itemvalue="JUnit.SqlAppTest.sqlQuerytest" />
         <item itemvalue="JUnit.CountryTest.testGetString" />
         <item itemvalue="JUnit.SqlAppTest.testGetCity" />
         <item itemvalue="JUnit.SqlAppTest.testAreaEnum" />
-        <item itemvalue="JUnit.AppTest.testSqlApp" />
       </list>
     </recent_temporary>
   </component>

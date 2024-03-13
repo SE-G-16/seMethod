@@ -35,6 +35,7 @@ public class CountryLanguageTest {
         if(country != null) {
             assertEquals("United States", country.name);
             assertEquals("North America", country.continent);
+
         }
 
 
@@ -52,10 +53,24 @@ public class CountryLanguageTest {
             assertEquals(language.is_official, "T");
 
         }
-
-
-
         // Add more assertions for other attributes
+    }
+
+    @Test
+    public void testGetCountryLanguage()
+    {
+        CountryLanguage cl = sqlApp.getCountryLanguage("GBR");
+
+        if(cl != null)
+        {
+           //System.out.println(cl.country_code + " " + cl.language + " " + cl.percentage);
+           assertEquals("GBR", cl.country_code);
+           assertEquals("English", cl.language);
+           assertEquals(97.3, cl.percentage);
+           assertEquals("T", cl.is_official);
+
+        }
+
     }
 
     // Add more test methods for other functionalities.

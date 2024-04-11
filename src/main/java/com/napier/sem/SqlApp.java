@@ -707,7 +707,19 @@ public class SqlApp
             System.out.println(e.getMessage());
             //System.out.println("Failed to get " + _qtype + " details");
         }
-        System.out.println(" totalpop => " + totalPopulation + "  :in cities => " + cityTotal + " :out of cities => " + (totalPopulation - cityTotal));
+
+        var outSidePop = (totalPopulation - cityTotal);
+        float inPerc = ((float) cityTotal / totalPopulation) * 100;
+        float outPerc = ((float) outSidePop / totalPopulation) * 100;
+
+        System.out.println(
+                " \nCountry Code: " + _areaStr +
+                " \nTotal Overall Population Amount : " + totalPopulation +
+                " \nPopulation Living in the Cities : " + cityTotal +
+                " \nPopulation Livign Outside Cities : " + (totalPopulation - cityTotal) +
+                " \nPerecentage in cities : " + String.format("%.2f", inPerc) +
+                " \nPercentage outside cities : "  + String.format("%.2f", outPerc)
+        );
 
     } // end GetPopInVOutCity()
 

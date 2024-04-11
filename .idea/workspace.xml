@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="removed MongoApp.java">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Updated the Population In n Out method to be more presentable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,15 +308,7 @@
       <workItem from="1710347705299" duration="18000" />
       <workItem from="1710347755436" duration="1974000" />
       <workItem from="1710419534450" duration="1136000" />
-      <workItem from="1712834573074" duration="1540000" />
-    </task>
-    <task id="LOCAL-00005" summary="Updated .gitignore &#10;Added a License file">
-      <option name="closed" value="true" />
-      <created>1707774386662</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1707774386662</updated>
+      <workItem from="1712834573074" duration="12965000" />
     </task>
     <task id="LOCAL-00006" summary="Updated README with badges &#10;renamed License file">
       <option name="closed" value="true" />
@@ -701,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710348805980</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Updated the Population In n Out method to be more presentable">
+      <option name="closed" value="true" />
+      <created>1712836232629</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836232630</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -720,7 +721,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed docker compose to manage teh race conditions of the dockers&#10;&#10;changed some of the ide settings also" />
     <MESSAGE value="changed it so App is main entry point which calls SqlApp and refcatored the app to have better connect and disconnect messages" />
     <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File" />
     <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File&#10;Changed Disconnects logic" />
@@ -745,7 +745,8 @@
     <MESSAGE value="added workspace.xml" />
     <MESSAGE value="Added more test coverage for display country and get country, plus other fixes" />
     <MESSAGE value="removed MongoApp.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed MongoApp.java" />
+    <MESSAGE value="Updated the Population In n Out method to be more presentable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the Population In n Out method to be more presentable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

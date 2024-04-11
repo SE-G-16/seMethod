@@ -297,32 +297,66 @@ public class App {
         s.GetPopInVOutCity(Area.Country , "France");
 
         // overall population reports
-        print("\n Overall Population \n");
-        // get population method not created yet
-        // display population
+        print("\n Query 26 - Overall Population of World \n");
+        s.GetOverallPopulationByArea(Area.World, "");
 
-        // overall langaugaes reports
+        print("\n Query 27 - Overall Population of continent \n");
+        s.GetOverallPopulationByArea(Area.Continent, "Europe");
+
+        print("\n Query 28 - Overall Population by Region \n");
+        s.GetOverallPopulationByArea(Area.Region, "Southern Africa");
+
+        print("\n Query 29 - Overall Population by country  \n");
+        s.GetOverallPopulationByArea(Area.Country, "France");
+
+        print("\n Query 30 - Overall Population by district  \n");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.District, "New York");
+
+        print("\n Query 31 - Overall Population by city  \n");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.City, "Paris");
+
+        // overall languages reports
         print("\n Languages Report: \n");
-        // get langauges method not created yet
-        // display langauges
 
+        print("\n Query 32 -  how many people in the world population speak Chinese \n");
+        s.GetPopulationByLanguageSpoken("Chinese");
+
+        print("\n Query 33 -  how many people in the world population speak English \n");
+        s.GetPopulationByLanguageSpoken("English");
+
+        print("\n Query 34 -  how many people in the world population speak Hindi \n");
+        s.GetPopulationByLanguageSpoken("Hindi");
+
+        print("\n Query 35 -  how many people in the world population speak Spanish \n");
+        s.GetPopulationByLanguageSpoken("Spanish");
+
+        print("\n Query 36 -  how many people in the world population speak Arabic \n");
+        s.GetPopulationByLanguageSpoken("Arabic");
 
         // country report
-        print("\n Country Report:\n");
+        print("\n Query 37 - Country Report:\n");
         Country australia = s.getCountry("AUS");
         s.displayCountry(australia);
 
 
         // city report
-        print("\n City Report:\n");
+        print("\n Query 38 - City Report:\n");
         City kabul = s.getCity(1);
         s.displayCity(kabul);
 
 
         // capital report
-        print("\n Capital Report:\n");
+        print("\n Query 37 - Capital Report:\n");
         City Delhi = s.getCity(1109);
         s.displayCity(Delhi);
+
+        /*print("\n QUERYTESTER - This is to verify statement for wrong use of parameters \n");
+        s.GetOverallPopulationByArea(Area.City, "");
+        s.GetOverallPopulationByArea(Area.District, "");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.World, "");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.Continent, "");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.Region, "");
+        s.GetOverallPopulationByAreaForDistrictCity(Area.Country, "");*/
 
 
         // Disconnect from database

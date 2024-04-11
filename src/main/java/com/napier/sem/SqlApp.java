@@ -1,7 +1,11 @@
 package com.napier.sem;
 
+import java.math.BigInteger;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
+
+import static java.lang.String.valueOf;
 
 enum QType {
     Country,
@@ -14,8 +18,8 @@ enum Area {
     Continent,
     Region,
     Country,
-
     District,
+    City
 
 
 }
@@ -145,7 +149,9 @@ public class SqlApp
 
         if (_city != null)
         {
+            System.out.println("\n----------------------------------------------\n");
             System.out.println(
+
                     "ID: " + _city.id + "\n" +
                             "Name: " + _city.name + "\n" +
                             "Code: " + _city.country_code + "\n" +
@@ -154,11 +160,13 @@ public class SqlApp
 
                             );
 
+
             stb.append("ID: ").append(_city.id).append("\n");
             stb.append("Name: ").append(_city.name).append("\n");
             stb.append("Code: ").append(_city.country_code).append("\n");
             stb.append("District: ").append(_city.district).append("\n");
             stb.append("Pop: ").append(_city.population).append("\n");
+            stb.append("\n----------------------------------------------\n");
 
             return stb.toString();
         }
@@ -229,6 +237,7 @@ public class SqlApp
 
         if (_country != null)
         {
+            System.out.println("\n----------------------------------------------\n");
             System.out.println(
                     "Code: " + _country.code + "\n" +
                             "Name: " + _country.name + "\n" +
@@ -263,6 +272,7 @@ public class SqlApp
             stb.append("Head of State: ").append(_country.head_of_state).append("\n");
             stb.append("Capital: ").append(_country.capital).append("\n");
             stb.append("Code 2: ").append(_country.code_two).append("\n");
+            stb.append("\n----------------------------------------------\n");
 
 
             return stb.toString();
@@ -360,11 +370,12 @@ public class SqlApp
     {
         if (_language != null)
         {
+            System.out.println("\n----------------------------------------------\n");
             System.out.println(
                     "Country Code: " + _language.country_code + "\n" +
                             "Language: " + _language.language + "\n" +
                             "Is Official language : " + _language.is_official + "\n" +
-                            "Pecentage: " + _language.percentage + "\n"
+                            "Percentage: " + _language.percentage + "\n"
 
             );
         }
@@ -615,6 +626,11 @@ public class SqlApp
 
         String sqlArgs = "";
 
+        String countryName = "";
+        String countryRegion = "";
+        String countryContinent = "";
+
+
         switch (_area) {
             case World:
                 sqlArgs = "";
@@ -682,11 +698,11 @@ public class SqlApp
             Statement stmt = App.con.createStatement();
             // Create string for SQL statement
             String countryPopByArea =
-                    "SELECT country.Population as totalPop, country.name, country.Continent " +
+                    "SELECT country.Population as totalPop, country.name as cname, country.region as creg, country.Continent as ccon  " +
                             " FROM country " +
                             " LEFT JOIN city ON country.Code = city.CountryCode " +
                             sqlArgs +
-                            " GROUP BY country.name, totalPop, country.Continent ";
+                            " GROUP BY cname, totalPop, creg, ccon";
 
             //+ sqlArgs
             //+ topArgs
@@ -700,6 +716,9 @@ public class SqlApp
             // Check one is returned
             while (rset.next()) {
 
+                countryName = rset.getString("cname");
+                countryRegion = rset.getString("creg");
+                countryContinent = rset.getString("ccon");
                 totalPopulation += rset.getInt("totalPop");
             }
         }
@@ -712,15 +731,221 @@ public class SqlApp
         float inPerc = ((float) cityTotal / totalPopulation) * 100;
         float outPerc = ((float) outSidePop / totalPopulation) * 100;
 
+        System.out.println("\n----------------------------------------------\n");
         System.out.println(
-                " \nCountry Code: " + _areaStr +
+                " \nCountry Name: " + countryName + " \tRegion: "  + countryRegion + " \tContinent: " + countryContinent +
                 " \nTotal Overall Population Amount : " + totalPopulation +
                 " \nPopulation Living in the Cities : " + cityTotal +
-                " \nPopulation Livign Outside Cities : " + (totalPopulation - cityTotal) +
-                " \nPerecentage in cities : " + String.format("%.2f", inPerc) +
+                " \nPopulation Living Outside Cities : " + (totalPopulation - cityTotal) +
+                " \nPercentage in cities : " + String.format("%.2f", inPerc) +
                 " \nPercentage outside cities : "  + String.format("%.2f", outPerc)
         );
+        System.out.println("\n----------------------------------------------\n");
 
     } // end GetPopInVOutCity()
+
+    public void GetOverallPopulationByArea(Area _area, String _areaStr)
+    {
+
+        if(
+                (Area.valueOf("City").equals(_area)) ||
+                (Area.valueOf("District").equals(_area))
+        )
+        {
+            System.out.println("This method only supports the Area.World or Area.Continent or Area.Region or Area.Country, " +
+                    "Please change the parameters to support this other use another method");
+            // early return to stop function breaking
+            return;
+        }
+
+
+        long overallPopulation = 0;
+
+        String _clmName = (_area == Area.Country) ? "country.name" : _area.toString();
+
+        String sqlArgs = "";
+
+        switch (_area) {
+            case World:
+                sqlArgs = "";
+                break;
+
+            case Continent:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case Region:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case Country:
+
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            default:
+                sqlArgs = "";
+                break;
+        }
+
+        // get population of just cities
+        try {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String overallPopSelect =
+                    "SELECT sum(country.Population) as pop " +
+                            " FROM country " +
+                            sqlArgs
+
+
+                    //+ topArgs
+                    ;
+
+            System.out.println("SQL statement: " + overallPopSelect);
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(overallPopSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                overallPopulation += rset.getLong("pop");
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            //System.out.println("Failed to get " + _qtype + " details");
+        }
+        System.out.println("\n----------------------------------------------\n");
+        System.out.println(
+                "Overall population: " + overallPopulation +
+                "\nFor Area " + _clmName
+        );
+        System.out.println("\n----------------------------------------------\n");
+    }
+
+    // city and district version of above code
+    public void GetOverallPopulationByAreaForDistrictCity(Area _area, String _areaStr)
+    {
+        if(
+                (Area.valueOf("World").equals(_area)) ||
+                (Area.valueOf("Continent").equals(_area)) ||
+                (Area.valueOf("Region").equals(_area)) ||
+                (Area.valueOf("Country").equals(_area))
+        )
+        {
+
+            System.out.println("This method only supports the Area.City & Area.District, " +
+                    "Please change the parameters to support this other use another method");
+
+            // early return to stop function breaking
+            return;
+        }
+
+        long overallCityDisPopulation = 0;
+
+        String _clmName = (_area == Area.City) ? "city.name" : _area.toString();
+
+        String sqlArgs = "";
+
+        switch (_area) {
+
+            case District:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            case City:
+                sqlArgs = "where " + _clmName + " = '" + _areaStr + "'";
+                break;
+
+            default:
+                sqlArgs = "";
+                break;
+        }
+
+        // get population of just cities
+        try {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String overallPopCitySelect =
+                    "SELECT sum(city.Population) as pop " +
+                            " FROM city " +
+                            sqlArgs
+
+
+                    //+ topArgs
+                    ;
+
+            //System.out.println("SQL statement: " + overallPopCitySelect);
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(overallPopCitySelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                overallCityDisPopulation += rset.getLong("pop");
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            //System.out.println("Failed to get " + _qtype + " details");
+        }
+        System.out.println("\n----------------------------------------------\n");
+        System.out.println(
+                "Overall population: " + overallCityDisPopulation +
+                        "\nFor Area " + _clmName
+        );
+        System.out.println("\n----------------------------------------------\n");
+    }
+
+    public void GetPopulationByLanguageSpoken(String _language)
+    {
+        long overallPeople = 0;
+
+        String sqlArgs = "";
+        sqlArgs = "where countrylanguage.`Language` = '" + _language + "'";
+
+        // get population of just cities
+        try {
+            // Create an SQL statement
+            Statement stmt = App.con.createStatement();
+            // Create string for SQL statement
+            String overallPopLangSelect =
+                    "SELECT sum(country.population) as pop " +
+                            " FROM country " +
+                            " LEFT JOIN countrylanguage ON country.Code = countrylanguage.CountryCode " +
+                            sqlArgs
+
+                    //+ topArgs
+                    ;
+
+            //System.out.println("SQL statement: " + overallPopLangSelect);
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(overallPopLangSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while (rset.next()) {
+
+                overallPeople += rset.getLong("pop");
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            //System.out.println("Failed to get " + _qtype + " details");
+        }
+        System.out.println("\n----------------------------------------------\n");
+        System.out.println(
+                "Overall population: " + overallPeople +
+                        "\nSpeak the language : " + _language
+        );
+        System.out.println("\n----------------------------------------------\n");
+    }
+
+
+
 
 } // end SqlApp

@@ -171,8 +171,8 @@ class SqlAppTest {
 
         City city = App.s.getCity(1106);
 
-        String result = s.displayCity(city);
-        String expected = "ID: 1106\nName: New Bombay\nCode: IND\nDistrict: Maharashtra\nPop: 307297\n";
+        String result = App.s.displayCity(city);
+        String expected = "ID: 1106\nName: New Bombay\nCode: IND\nDistrict: Maharashtra\nPop: 307297\n\n----------------------------------------------\n";
 
         assertEquals(expected, result);
 
@@ -234,7 +234,8 @@ class SqlAppTest {
                 "Government Type: Constitutional Monarchy\n" +
                 "Head of State: Elisabeth II\n" +
                 "Capital: 456\n" +
-                "Code 2: GB\n";
+                "Code 2: GB\n" +
+                "\n----------------------------------------------\n";
 
         assertEquals(expected, returnStr);
 
@@ -243,17 +244,30 @@ class SqlAppTest {
 
     @Test
     void getCountryOfficialLanguage() {
+        String response = String.valueOf(App.s.getCountryOfficialLanguage("GBR"));
+        assertEquals("Country: GBR English T 97.3", response);
 
     }
 
     @Test
     void getCountryLanguage() {
+        CountryLanguage response = App.s.getCountryLanguage("GBR");
+        assertEquals("English", response.language);
 
     }
 
     @Test
     void displayCountryLanguage() {
+        CountryLanguage countryLanguage = App.s.getCountryLanguage("GBR");
+        var response = String.valueOf(App.s.displayCountryLanguage(countryLanguage));
+        assertEquals(
+                "\n----------------------------------------------\n" +
+                "Country Code: GBR\n" +
+                "Language: English\n" +
+                "Is Official language : T\n" +
+                "Percentage: 97.3\n",
 
+                response);
     }
 
     @Test
@@ -278,11 +292,59 @@ class SqlAppTest {
 
     @Test
     void getQTypeByPopSize() {
+
+        integratedTop3CountryTest();
+
+        integratedTop3EuropeCities();
+
+        integratedTop3CitiesInSouthernEurope();
     }
+
+
+
+    private static void integratedTop3CountryTest() {
+        String response = String.valueOf(App.s.GetQTypeByPopSize(QType.Country, Area.World, "", 3));
+        assertEquals("[Country: China  Pop: 1277558000, Country: India  Pop: 1013662000, Country: United States  Pop: 278357000]", response);
+    }
+
+
+    private static void integratedTop3EuropeCities() {
+        String response = String.valueOf(App.s.GetQTypeByPopSize(QType.City, Area.Continent, "Europe", 3));
+        assertEquals("[City: Moscow 8389200, City: London 7285000, City: Berlin 3386667]", response);
+    }
+
+    private static void integratedTop3CitiesInSouthernEurope() {
+        String response = String.valueOf(App.s.GetQTypeByPopSize(QType.Country, Area.Region, "Southern Europe", 3));
+        assertEquals("[Country: Italy  Pop: 57680000, Country: Spain  Pop: 39441700, Country: Yugoslavia  Pop: 10640000]", response);
+    }
+
 
     @Test
     void getPopInVOutCity() {
+        String response = String.valueOf(App.s.GetPopInVOutCity(Area.World, "France"));
+        assertEquals("\n----------------------------------------------\n" +
+                "\n" +
+                " \n" +
+                "Country Name: Zimbabwe \tRegion: Eastern Africa \tContinent: Africa \n" +
+                "Total Overall Population Amount : 1783782154 \n" +
+                "Population Living in the Cities : 1429559884 \n" +
+                "Population Living Outside Cities : 354222270 \n" +
+                "Percentage in cities : 80.14 \n" +
+                "Percentage outside cities : 19.86\n" +
+                "----------------------------------------------\n",
+
+                response);
     }
 
+    @Test
+    void getOverallPopulationByArea() {
+    }
 
+    @Test
+    void getOverallPopulationByAreaForDistrictCity() {
+    }
+
+    @Test
+    void getPopulationByLanguageSpoken() {
+    }
 }

@@ -1,9 +1,7 @@
 package com.napier.sem;
 
-import java.math.BigInteger;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Objects;
 
 import static java.lang.String.valueOf;
 
@@ -143,6 +141,10 @@ public class SqlApp
         }
     }
 
+    /**
+     * @param _city
+     * @return
+     */
     public String displayCity(City _city)
     {
         StringBuilder stb = new StringBuilder();
@@ -177,6 +179,10 @@ public class SqlApp
 
     //<editor-fold desc="country methods>"
 
+    /**
+     * @param _code
+     * @return
+     */
     // a method for retrieving the information from the selected country
     public Country getCountry(String _code)
     {
@@ -284,6 +290,10 @@ public class SqlApp
 
     //<editor-fold desc="country language methods>"
 
+    /**
+     * @param _code
+     * @return
+     */
     // a method for retrieving the information from the selected country language
     public CountryLanguage getCountryOfficialLanguage(String _code)
     {
@@ -366,19 +376,18 @@ public class SqlApp
      * @param _language
      */
     // a method for displaying the country language
-    public void displayCountryLanguage(CountryLanguage _language)
+    public StringBuilder displayCountryLanguage(CountryLanguage _language)
     {
         if (_language != null)
         {
-            System.out.println("\n----------------------------------------------\n");
-            System.out.println(
-                    "Country Code: " + _language.country_code + "\n" +
-                            "Language: " + _language.language + "\n" +
-                            "Is Official language : " + _language.is_official + "\n" +
-                            "Percentage: " + _language.percentage + "\n"
+            StringBuilder stb = new StringBuilder();
+            stb.append("\n----------------------------------------------\n");
+            stb.append("Country Code: ").append(_language.country_code).append("\n").append("Language: ").append(_language.language).append("\n").append("Is Official language : ").append(_language.is_official).append("\n").append("Percentage: ").append(_language.percentage).append("\n");
 
-            );
+            return stb;
+
         }
+        return null;
     }
 
 
@@ -613,8 +622,9 @@ public class SqlApp
     /**
      * @param _area
      * @param _areaStr
+     * @return
      */
-    public void GetPopInVOutCity(Area _area, String _areaStr)
+    public StringBuilder GetPopInVOutCity(Area _area, String _areaStr)
     {
         Integer cityTotal = 0;
         Integer totalPopulation = 0;
@@ -731,19 +741,26 @@ public class SqlApp
         float inPerc = ((float) cityTotal / totalPopulation) * 100;
         float outPerc = ((float) outSidePop / totalPopulation) * 100;
 
-        System.out.println("\n----------------------------------------------\n");
-        System.out.println(
-                " \nCountry Name: " + countryName + " \tRegion: "  + countryRegion + " \tContinent: " + countryContinent +
-                " \nTotal Overall Population Amount : " + totalPopulation +
+        StringBuilder stb = new StringBuilder();
+
+        stb.append("\n----------------------------------------------\n\n");
+        stb.append(" \nCountry Name: " + countryName + " \tRegion: "  + countryRegion + " \tContinent: " + countryContinent +
+        " \nTotal Overall Population Amount : " + totalPopulation +
                 " \nPopulation Living in the Cities : " + cityTotal +
                 " \nPopulation Living Outside Cities : " + (totalPopulation - cityTotal) +
                 " \nPercentage in cities : " + String.format("%.2f", inPerc) +
-                " \nPercentage outside cities : "  + String.format("%.2f", outPerc)
-        );
-        System.out.println("\n----------------------------------------------\n");
+                " \nPercentage outside cities : "  + String.format("%.2f", outPerc));
+        stb.append("\n----------------------------------------------\n");
+
+
+        return stb;
 
     } // end GetPopInVOutCity()
 
+    /**
+     * @param _area
+     * @param _areaStr
+     */
     public void GetOverallPopulationByArea(Area _area, String _areaStr)
     {
 

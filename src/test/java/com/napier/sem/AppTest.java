@@ -72,8 +72,16 @@ class AppTest {
     }
 
 
+
     @Test
     void print() {
+
+        String nullPrint = String.valueOf(App.print(null));
+        assertEquals("" , nullPrint);
+
+        String zeroPrint = String.valueOf(App.print("0"));
+        assertEquals("0" , zeroPrint);
+
         String aaa = String.valueOf(App.print("hello print method" + " cat"));
         String bbb = String.valueOf(App.print( ""));
         String ccc = String.valueOf(App.print("44433"));

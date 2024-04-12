@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Fixed Displaying issues">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Codecoverage change and removal of some long sql statements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,23 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SqlAppTest.getPopulationByLanguageSpoken">
+  <component name="RunManager" selected="JUnit.AppTest.print">
+    <configuration name="AppTest.print" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="METHOD_NAME" value="print" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SqlAppTest.displayCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -178,22 +194,6 @@
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
       <option name="METHOD_NAME" value="displayCity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SqlAppTest.displayCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
-      <option name="METHOD_NAME" value="displayCountry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -267,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.print" />
         <item itemvalue="JUnit.SqlAppTest.getPopulationByLanguageSpoken" />
         <item itemvalue="JUnit.SqlAppTest.getOverallPopulationByAreaForDistrictCity" />
         <item itemvalue="JUnit.SqlAppTest.getOverallPopulationByArea" />
         <item itemvalue="JUnit.SqlAppTest.displayCity" />
-        <item itemvalue="JUnit.SqlAppTest.displayCountry" />
       </list>
     </recent_temporary>
   </component>
@@ -322,15 +322,7 @@
       <workItem from="1712834573074" duration="13766000" />
       <workItem from="1712914633981" duration="5981000" />
       <workItem from="1712921423821" duration="75000" />
-      <workItem from="1712928500912" duration="5380000" />
-    </task>
-    <task id="LOCAL-00010" summary="Created a Use Case for HR for the cities by population size">
-      <option name="closed" value="true" />
-      <created>1707836482994</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1707836482994</updated>
+      <workItem from="1712928500912" duration="7522000" />
     </task>
     <task id="LOCAL-00011" summary="Created a Use Case for HR for the countries by population size">
       <option name="closed" value="true" />
@@ -716,7 +708,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712932713350</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Codecoverage change and removal of some long sql statements">
+      <option name="closed" value="true" />
+      <created>1712935659330</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1712935659330</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +735,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed test location&#10;Added some static strings to stop human error" />
     <MESSAGE value="database connection debugging changes" />
     <MESSAGE value="more database connection debugging changes" />
     <MESSAGE value="Did Query 9 as a test&#10;Added Formatting&#10;Disabled SqlApp disconnect as unnecessary" />
@@ -760,7 +759,8 @@
     <MESSAGE value="Added more Integration tests" />
     <MESSAGE value="Added even more Integration tests" />
     <MESSAGE value="Fixed Displaying issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Displaying issues" />
+    <MESSAGE value="Codecoverage change and removal of some long sql statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Codecoverage change and removal of some long sql statements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

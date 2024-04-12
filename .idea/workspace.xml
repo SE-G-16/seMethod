@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added New Queries for languages as well as fixed a lot other bug and format improvements">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more Integration tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
@@ -111,7 +111,10 @@
     "JUnit.SqlAppTest.getCountry.executor": "Run",
     "JUnit.SqlAppTest.getCountryLanguage.executor": "Run",
     "JUnit.SqlAppTest.getCountryOfficialLanguage.executor": "Run",
+    "JUnit.SqlAppTest.getOverallPopulationByArea.executor": "Run",
+    "JUnit.SqlAppTest.getOverallPopulationByAreaForDistrictCity.executor": "Run",
     "JUnit.SqlAppTest.getPopInVOutCity.executor": "Run",
+    "JUnit.SqlAppTest.getPopulationByLanguageSpoken.executor": "Run",
     "JUnit.SqlAppTest.getQTypeByPopSize.executor": "Run",
     "JUnit.SqlAppTest.sqlQuerytest.executor": "Run",
     "JUnit.SqlAppTest.testAreaEnum.executor": "Run",
@@ -163,7 +166,7 @@
       <recent name="com.napier.sem" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SqlAppTest.displayCity">
+  <component name="RunManager" selected="JUnit.SqlAppTest.getPopulationByLanguageSpoken">
     <configuration name="SqlAppTest.displayCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -196,7 +199,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SqlAppTest.displayObjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqlAppTest.getOverallPopulationByArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -206,13 +209,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
-      <option name="METHOD_NAME" value="displayObjects" />
+      <option name="METHOD_NAME" value="getOverallPopulationByArea" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SqlAppTest.getCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqlAppTest.getOverallPopulationByAreaForDistrictCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -222,13 +225,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
-      <option name="METHOD_NAME" value="getCountry" />
+      <option name="METHOD_NAME" value="getOverallPopulationByAreaForDistrictCity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SqlAppTest.getPopInVOutCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqlAppTest.getPopulationByLanguageSpoken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -238,7 +241,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.SqlAppTest" />
-      <option name="METHOD_NAME" value="getPopInVOutCity" />
+      <option name="METHOD_NAME" value="getPopulationByLanguageSpoken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SqlAppTest.getPopulationByLanguageSpoken" />
+        <item itemvalue="JUnit.SqlAppTest.getOverallPopulationByAreaForDistrictCity" />
+        <item itemvalue="JUnit.SqlAppTest.getOverallPopulationByArea" />
         <item itemvalue="JUnit.SqlAppTest.displayCity" />
         <item itemvalue="JUnit.SqlAppTest.displayCountry" />
-        <item itemvalue="JUnit.SqlAppTest.getCountry" />
-        <item itemvalue="JUnit.SqlAppTest.displayObjects" />
-        <item itemvalue="JUnit.SqlAppTest.getPopInVOutCity" />
       </list>
     </recent_temporary>
   </component>
@@ -317,15 +320,9 @@
       <workItem from="1710347755436" duration="1974000" />
       <workItem from="1710419534450" duration="1136000" />
       <workItem from="1712834573074" duration="13766000" />
-      <workItem from="1712914633981" duration="5421000" />
-    </task>
-    <task id="LOCAL-00007" summary="Fixed Badges">
-      <option name="closed" value="true" />
-      <created>1707776653045</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1707776653045</updated>
+      <workItem from="1712914633981" duration="5981000" />
+      <workItem from="1712921423821" duration="75000" />
+      <workItem from="1712928500912" duration="2443000" />
     </task>
     <task id="LOCAL-00008" summary="Created a Use Case for HR for the world by population size">
       <option name="closed" value="true" />
@@ -711,7 +708,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712847750077</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Added more Integration tests">
+      <option name="closed" value="true" />
+      <created>1712920704602</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1712920704604</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +735,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File" />
     <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File&#10;Changed Disconnects logic" />
     <MESSAGE value="Fixed DB connection&#10;Fixed Query 8&#10;Fixed SQL query on SqlApp" />
     <MESSAGE value="Changed test location&#10;Added some static strings to stop human error" />
@@ -755,7 +759,8 @@
     <MESSAGE value="removed MongoApp.java" />
     <MESSAGE value="Updated the Population In n Out method to be more presentable" />
     <MESSAGE value="Added New Queries for languages as well as fixed a lot other bug and format improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added New Queries for languages as well as fixed a lot other bug and format improvements" />
+    <MESSAGE value="Added more Integration tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more Integration tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

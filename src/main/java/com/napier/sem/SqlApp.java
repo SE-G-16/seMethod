@@ -760,19 +760,21 @@ public class SqlApp
     /**
      * @param _area
      * @param _areaStr
+     * @return
      */
-    public void GetOverallPopulationByArea(Area _area, String _areaStr)
+    public StringBuilder GetOverallPopulationByArea(Area _area, String _areaStr)
     {
+        StringBuilder stb = new StringBuilder();
 
         if(
                 (Area.valueOf("City").equals(_area)) ||
                 (Area.valueOf("District").equals(_area))
         )
         {
-            System.out.println("This method only supports the Area.World or Area.Continent or Area.Region or Area.Country, " +
+            stb.append("This method only supports the Area.World or Area.Continent or Area.Region or Area.Country, " +
                     "Please change the parameters to support this other use another method");
-            // early return to stop function breaking
-            return;
+
+            return stb;
         }
 
 
@@ -834,17 +836,19 @@ public class SqlApp
             System.out.println(e.getMessage());
             //System.out.println("Failed to get " + _qtype + " details");
         }
-        System.out.println("\n----------------------------------------------\n");
-        System.out.println(
-                "Overall population: " + overallPopulation +
-                "\nFor Area " + _clmName
-        );
-        System.out.println("\n----------------------------------------------\n");
+
+        stb.append("\n----------------------------------------------\n");
+        stb.append("Overall population: ").append(overallPopulation).append("\nFor Area ").append(_clmName);
+        stb.append("\n----------------------------------------------\n");
+
+        return stb;
     }
 
     // city and district version of above code
-    public void GetOverallPopulationByAreaForDistrictCity(Area _area, String _areaStr)
+    public StringBuilder GetOverallPopulationByAreaForDistrictCity(Area _area, String _areaStr)
     {
+        StringBuilder stb = new StringBuilder();
+
         if(
                 (Area.valueOf("World").equals(_area)) ||
                 (Area.valueOf("Continent").equals(_area)) ||
@@ -852,12 +856,10 @@ public class SqlApp
                 (Area.valueOf("Country").equals(_area))
         )
         {
-
-            System.out.println("This method only supports the Area.City & Area.District, " +
+            stb.append("This method only supports the Area.City & Area.District, " +
                     "Please change the parameters to support this other use another method");
 
-            // early return to stop function breaking
-            return;
+            return stb;
         }
 
         long overallCityDisPopulation = 0;
@@ -910,16 +912,19 @@ public class SqlApp
             System.out.println(e.getMessage());
             //System.out.println("Failed to get " + _qtype + " details");
         }
-        System.out.println("\n----------------------------------------------\n");
-        System.out.println(
-                "Overall population: " + overallCityDisPopulation +
-                        "\nFor Area " + _clmName
-        );
-        System.out.println("\n----------------------------------------------\n");
+
+        stb.append("\n----------------------------------------------\n");
+        stb.append("\nOverall population: " + overallCityDisPopulation +
+        "\nFor Area " + _clmName);
+        stb.append("\n----------------------------------------------\n");
+
+        return stb;
     }
 
-    public void GetPopulationByLanguageSpoken(String _language)
+    public StringBuilder GetPopulationByLanguageSpoken(String _language)
     {
+        StringBuilder stb = new StringBuilder();
+
         long overallPeople = 0;
 
         String sqlArgs = "";
@@ -954,12 +959,12 @@ public class SqlApp
             System.out.println(e.getMessage());
             //System.out.println("Failed to get " + _qtype + " details");
         }
-        System.out.println("\n----------------------------------------------\n");
-        System.out.println(
-                "Overall population: " + overallPeople +
-                        "\nSpeak the language : " + _language
-        );
-        System.out.println("\n----------------------------------------------\n");
+
+        stb.append("\n----------------------------------------------\n");
+        stb.append("Overall population: ").append(overallPeople).append("\nSpeak the language : ").append(_language);
+        stb.append("\n----------------------------------------------\n");
+
+        return stb;
     }
 
 

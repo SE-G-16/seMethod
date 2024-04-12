@@ -337,14 +337,44 @@ class SqlAppTest {
     }
 
     @Test
-    void getOverallPopulationByArea() {
+    void getOverallPopulationByArea()
+    {
+        String response = String.valueOf(App.s.GetOverallPopulationByArea(Area.Continent, "Europe"));
+        assertEquals("\n----------------------------------------------\n" +
+                "Overall population: 730074600\n" +
+                "For Area Continent\n" +
+                "----------------------------------------------\n",
+
+                response);
     }
 
     @Test
-    void getOverallPopulationByAreaForDistrictCity() {
+    void getOverallPopulationByAreaForDistrictCity()
+    {
+        String response = String.valueOf(App.s.GetOverallPopulationByAreaForDistrictCity(Area.District, "New york"));
+        assertEquals(
+                "\n" +
+                        "----------------------------------------------\n" +
+                        "\n" +
+                        "Overall population: 8958085\n" +
+                        "For Area District\n" +
+                        "----------------------------------------------\n",
+
+                response);
     }
 
     @Test
-    void getPopulationByLanguageSpoken() {
+    void getPopulationByLanguageSpoken()
+    {
+        String response = String.valueOf(App.s.GetPopulationByLanguageSpoken("Chinese"));
+        assertEquals(
+                "\n" +
+                        "----------------------------------------------\n" +
+                        "Overall population: 1968265500\n" +
+                        "Speak the language : Chinese\n" +
+                        "----------------------------------------------\n",
+
+                response);
+
     }
 }

@@ -752,7 +752,7 @@ public class SqlApp
                 " \nPercentage outside cities : "  + String.format("%.2f", outPerc));
         stb.append("\n----------------------------------------------\n");
 
-
+        System.out.println(stb);
         return stb;
 
     } // end GetPopInVOutCity()
@@ -774,6 +774,7 @@ public class SqlApp
             stb.append("This method only supports the Area.World or Area.Continent or Area.Region or Area.Country, " +
                     "Please change the parameters to support this other use another method");
 
+            System.out.println(stb);
             return stb;
         }
 
@@ -841,6 +842,7 @@ public class SqlApp
         stb.append("Overall population: ").append(overallPopulation).append("\nFor Area ").append(_clmName);
         stb.append("\n----------------------------------------------\n");
 
+        System.out.println(stb);
         return stb;
     }
 
@@ -859,6 +861,7 @@ public class SqlApp
             stb.append("This method only supports the Area.City & Area.District, " +
                     "Please change the parameters to support this other use another method");
 
+            System.out.println(stb);
             return stb;
         }
 
@@ -918,6 +921,7 @@ public class SqlApp
         "\nFor Area " + _clmName);
         stb.append("\n----------------------------------------------\n");
 
+        System.out.println(stb);
         return stb;
     }
 
@@ -964,6 +968,7 @@ public class SqlApp
         stb.append("Overall population: ").append(overallPeople).append("\nSpeak the language : ").append(_language);
         stb.append("\n----------------------------------------------\n");
 
+        System.out.println(stb);
         return stb;
     }
 

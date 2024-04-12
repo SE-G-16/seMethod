@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Added more Integration tests">
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Fixed Displaying issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/SqlApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/napier/sem/SqlAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,23 +322,7 @@
       <workItem from="1712834573074" duration="13766000" />
       <workItem from="1712914633981" duration="5981000" />
       <workItem from="1712921423821" duration="75000" />
-      <workItem from="1712928500912" duration="2443000" />
-    </task>
-    <task id="LOCAL-00008" summary="Created a Use Case for HR for the world by population size">
-      <option name="closed" value="true" />
-      <created>1707835074191</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1707835074192</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Created a Use Case for HR for the continent by population size">
-      <option name="closed" value="true" />
-      <created>1707835872196</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1707835872196</updated>
+      <workItem from="1712928500912" duration="5380000" />
     </task>
     <task id="LOCAL-00010" summary="Created a Use Case for HR for the cities by population size">
       <option name="closed" value="true" />
@@ -716,7 +700,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712920704604</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Added even more Integration tests">
+      <option name="closed" value="true" />
+      <created>1712931931299</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1712931931299</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Fixed Displaying issues">
+      <option name="closed" value="true" />
+      <created>1712932713350</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1712932713350</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,8 +735,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Tests to project&#10;Added test folder&#10;Added City Test&#10;Added Country Test File&#10;Changed Disconnects logic" />
-    <MESSAGE value="Fixed DB connection&#10;Fixed Query 8&#10;Fixed SQL query on SqlApp" />
     <MESSAGE value="Changed test location&#10;Added some static strings to stop human error" />
     <MESSAGE value="database connection debugging changes" />
     <MESSAGE value="more database connection debugging changes" />
@@ -760,7 +758,9 @@
     <MESSAGE value="Updated the Population In n Out method to be more presentable" />
     <MESSAGE value="Added New Queries for languages as well as fixed a lot other bug and format improvements" />
     <MESSAGE value="Added more Integration tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more Integration tests" />
+    <MESSAGE value="Added even more Integration tests" />
+    <MESSAGE value="Fixed Displaying issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Displaying issues" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

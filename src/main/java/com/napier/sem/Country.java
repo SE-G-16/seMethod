@@ -94,6 +94,7 @@ public class Country {
     @Override
     public String toString() {
 
-        return "Country: " + name + "  Pop: " +  population;
+        String toStringValue = "Country: " + name + "  Pop: " +  population;
+        return toStringValue;
     }
 }

@@ -686,7 +686,7 @@ public class SqlApp
                     //+ topArgs
                     ;
 
-            System.out.println("SQL statement: " + cityPopSelect);
+            //System.out.println("SQL statement: " + cityPopSelect);
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(cityPopSelect);
@@ -718,7 +718,7 @@ public class SqlApp
             //+ topArgs
             ;
 
-            System.out.println("SQL statement: " + countryPopByArea);
+            //System.out.println("SQL statement: " + countryPopByArea);
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(countryPopByArea);

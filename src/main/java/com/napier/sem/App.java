@@ -346,7 +346,7 @@ public class App {
 
 
         // capital report
-        print("\n Query 37 - Capital Report:\n");
+        print("\n Query 39 - Capital Report:\n");
         City Delhi = s.getCity(1109);
         s.displayCity(Delhi);
 

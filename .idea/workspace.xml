@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Changed the text for one query">
-      <change afterPath="$PROJECT_DIR$/screenshots/query_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_39.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/query_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +129,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/jakes/IdeaProjects/seMethod/screenshots",

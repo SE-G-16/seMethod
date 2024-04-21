@@ -17,7 +17,7 @@
 * Master Build Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/testing_1.yml?branch=master)
 * Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/testing_1.yml?branch=develop)
 * Release Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/testing_1.yml?branch=release)
-* Mysql/feature Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/SE-G-16/seMethod/testing_1.yml?branch=mysql/feature)
+
 
 * License [![LICENSE](https://img.shields.io/github/license/SE-G-16/seMethod.svg?style=flat-square)](https://github.com/SE-G-16/seMethod/blob/master/LICENSE)
 

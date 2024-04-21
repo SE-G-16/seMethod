@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Changed Build Status Badges">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/testing_1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/testing_1.yml" afterDir="false" />
+    <list default="true" id="af35d7c6-de80-49e1-a2ac-be5dd2f88840" name="Changes" comment="Changed Workflow to run in development">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,14 +326,6 @@
       <workItem from="1713439701342" duration="991000" />
       <workItem from="1713703472516" duration="226000" />
       <workItem from="1713705449404" duration="1571000" />
-    </task>
-    <task id="LOCAL-00014" summary="created the population">
-      <option name="closed" value="true" />
-      <created>1707838815955</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1707838815955</updated>
     </task>
     <task id="LOCAL-00015" summary="updated the use cases and diagrams">
       <option name="closed" value="true" />
@@ -719,7 +711,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713708276639</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Changed Workflow to run in development">
+      <option name="closed" value="true" />
+      <created>1713708438628</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1713708438628</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,7 +738,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added AppTest.java" />
     <MESSAGE value="Added Code Coverage Badge" />
     <MESSAGE value="Added Some basic unit test to increase codecov score" />
     <MESSAGE value="Removed 1 test that was breaking app" />
@@ -763,7 +762,8 @@
     <MESSAGE value="Codecoverage change and for print" />
     <MESSAGE value="Changed the text for one query" />
     <MESSAGE value="Changed Build Status Badges" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Build Status Badges" />
+    <MESSAGE value="Changed Workflow to run in development" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Workflow to run in development" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

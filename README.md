@@ -43,8 +43,53 @@ docker-compose build --no-cache
 ---
 ## Below is the screenshots for the Query Evidence
 
-### We believe that we completed 32 out of 32 requirements.
-#### Please Check Below for verification
+### We believe that we completed 32 out of 32 requirements
+Please Check Below for verification
+---
+
+### Table 
+
+| ID | NAME                                                                                                  | MET | SCREENSHOT |
+|----|-------------------------------------------------------------------------------------------------------|-----|------------|
+| 1  | All the countries in the world organised by largest population to smallest.                           | YES | BELOW      |
+| 2  | All the countries in a continent organised by largest population to smallest.                         | YES | BELOW      |
+| 3  | All the countries in a region organised by largest population to smallest.                            | YES | BELOW      |
+| 4  | The top N populated countries in the world where N is provided by the user.                           | YES | BELOW      |
+| 5  | The top N populated countries in a continent where N is provided by the user.                         | YES | BELOW      |
+| 6  | The top N populated countries in a region where N is provided by the user.                            | YES | BELOW      |
+| 7  | All the cities in the world organised by largest population to smallest.                              | YES | BELOW      |
+| 8  | All the cities in a continent organised by largest population to smallest.                            | YES | BELOW      |
+| 9  | All the cities in a region organised by largest population to smallest.                               | YES | BELOW      |
+| 10 | All the cities in a country organised by largest population to smallest.                              | YES | BELOW      |
+| 11 | All the cities in a district organised by largest population to smallest.                             | YES | BELOW      |
+| 12 | The top N populated cities in the world where N is provided by the user.                              | YES | BELOW      |
+| 13 | The top N populated cities in a continent where N is provided by the user.                            | YES | BELOW      |
+| 14 | The top N populated cities in a region where N is provided by the user.                               | YES | BELOW      |
+| 15 | The top N populated cities in a country where N is provided by the user.                              | YES | BELOW      |
+| 16 | The top N populated cities in a district where N is provided by the user.                             | YES | BELOW      |
+| 17 | All the capital cities in the world organised by largest population to smallest.                      | YES | BELOW      |
+| 18 | All the capital cities in a continent organised by largest population to smallest.                    | YES | BELOW      |
+| 19 | All the capital cities in a region organised by largest to smallest.                                  | YES | BELOW      |
+| 20 | The top N populated capital cities in the world where N is provided by the user.                      | YES | BELOW      |
+| 21 | The top N populated capital cities in a continent where N is provided by the user.                    | YES | BELOW      |
+| 22 | The top N populated capital cities in a region where N is provided by the user.                       | YES | BELOW      |
+| 23 | The population of people, people living in cities, and people not living in cities in each continent. | YES | BELOW      |
+| 24 | The population of people, people living in cities, and people not living in cities in each region.    | YES | BELOW      |
+| 25 | The population of people, people living in cities, and people not living in cities in each country.   | YES | BELOW      |
+| 26 | The population of the world.                                                                          | YES | BELOW      |
+| 27 | The population of a continent.                                                                        | YES | BELOW      |
+| 28 | The population of a region.                                                                           | YES | BELOW      |
+| 29 | The population of a country.                                                                          | YES | BELOW      |
+| 30 | The population of a district.                                                                         | YES | BELOW      |
+| 31 | The population of a city.                                                                             | YES | BELOW      |
+| 32 | The population of the world population that speak Chinese.                                            | YES | BELOW      |
+| 33 | The population of the world population that speak English.                                            | YES | BELOW      |
+| 34 | The population of the world population that speak Hindi.                                              | YES | BELOW      |
+| 35 | The population of the world population that speak Spanish.                                            | YES | BELOW      |
+| 36 | The population of the world population that speak Arabic.                                             | YES | BELOW      |
+| 37 | Country Report                                                                                        | YES | BELOW      |
+| 38 | City Report                                                                                           | YES | BELOW      |
+| 39 | Capital City Report                                                                                   | YES | BELOW      |
 
 ---
 
